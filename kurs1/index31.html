@@ -8,12 +8,26 @@
             
             function f_click_obraz_1(){
               if (v_pytanie_1){
-                v_pytanie_1 = false;  // odpowiedź prawidłowa              
+                v_pytanie_1 = false;  // zmiana na brak odpowiedzi lub odpowiedź nieprawidłowa              
                 document.getElementById('i_obraz_1').src = t_obraz; // zmiana obrazka               
                }
 
              else {
-                 v_pytanie_1 = true;  // ustawienie na brak odpowiedzi prawidłowej                   
+                 
+                 
+                    const form = document.querySelector("#myForm");
+                    const genderRadio = form.querySelectorAll("input[name=gender]");
+                    const resultElement = document.querySelector("#genderResult");
+
+                    for (const radio of genderRadio) {
+                        radio.addEventListener("change", function() {
+                         for (const radio of genderRadio) {
+                        if (radio.checked) {
+                        resultElement.innerText = radio.value;
+                            break;
+                        } } }); }
+                 
+                 v_pytanie_1 = true;  // odpowiedź prawidłowa
                  document.getElementById('i_obraz_1').src = t_obraz_1[1]; // zakrycie obrazka
             
 
