@@ -15,8 +15,7 @@
              else {
                  
              
-var a='Ja jestem';
- alert(a.length); // zwróci wartość 9, bo tyle znaków ma tekst
+alert(document.getElementById("pole").value);
                  
                  v_pytanie_1 = true;  // odpowiedź prawidłowa
                  document.getElementById('i_obraz_1').src = t_obraz_1[1]; // zakrycie obrazka
@@ -28,6 +27,7 @@ var a='Ja jestem';
     </head>
     <body>
         <img id="i_obraz_1" src="obraz/title.png" onclick="f_click_obraz_1()">
+        <input type="text" id="pole" value="Kubuś Puchatek">
 
     </body>
 </html>
