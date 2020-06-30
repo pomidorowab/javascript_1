@@ -24,6 +24,24 @@
             
             function spr_zatwierdz_obraz_1(){
                 alert("Your gender is female");
+                var pytanie = document.getElementsByName("pyt1");
+                if (pytanie[0].checked == true) {
+                    alert("0");
+                }
+                else if (pytnie[1].checked == true) 
+                {
+                    alert("1");                    
+                } 
+                else if (pytnie[2].checked == true) 
+                {
+                    alert("2");                    
+                }             
+                
+                else {                    
+                    document.getElementById('msg').innerHTML = "brak zaznaczonej odpowiedzi";
+                    return false;
+                }
+                return true;
             }
             
             
@@ -36,10 +54,10 @@
 
             <fieldset id="pyt" style="display:none;"> 
                 <legend>Pytanie:</legend>
-                <input type="radio" value="A" name="radio"> Odpowiedź A<br>
-                <input type="radio" value="B" name="radio"> Odpowiedź B<br>
-                <input type="radio" value="C" name="radio"> Odpowiedź C<br><br>
-                <input type="submit" value=" Zatwierdź" onclick="return spr_zatwierdz_obraz_1();">
+                <input type="radio" value="A" name="pyt1"> Odpowiedź A<br>
+                <input type="radio" value="B" name="pyt1"> Odpowiedź B<br>
+                <input type="radio" value="C" name="pyt1"> Odpowiedź C<br><br>
+                <input type="submit" value=" Zatwierdźz" onclick="return spr_zatwierdz_obraz_1();">
                
              </fieldset>       
             
