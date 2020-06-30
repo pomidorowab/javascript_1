@@ -8,9 +8,7 @@
            
           
             function f_click_obraz_1(){
-              if (v_pytanie_1){
-                   var wartosc = document.getElementById['pyt'].value;
-                   alert(wartosc);
+              if (v_pytanie_1){                  
                   
                   v_pytanie_1 = false;  // zmiana na brak odpowiedzi lub odpowiedź nieprawidłowa              
                   document.getElementById('i_obraz_1').src = t_obraz; // zmiana obrazka  
@@ -28,7 +26,7 @@
     <body>
         <img id="i_obraz_1" src="obraz/title.png" onclick="f_click_obraz_1()">
         <br><br>
-                    <fieldset id="pyt" name="a11" style="display:none;"> 
+                    <fieldset id="pyt" style="display:none;"> 
                         <legend>Pytanie:</legend>
                         <input type="radio" value="A" name="radio"> Odpowiedź A<br>
                         <input type="radio" value="B" name="radio"> Odpowiedź B<br>
