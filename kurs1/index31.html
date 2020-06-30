@@ -1,18 +1,20 @@
-
 <html>
     <head>
         <script>
             var t_obraz_1 = ['title.png','title_8.png'];        
-            var v_obraz_1 = true;
+            var v_pytanie_1 = false; //brak odpowiedzi na pytanie
+            
             function f_click_obraz_1(){
-              if (v_obraz_1){
-                 document.getElementById('i_obraz_1').src = t_obraz_1[1];
-                 v_obraz_1 = false;
+              if (v_pytanie_1){
+                v_pytanie_1 = true;  // odpowiedź prawidłowa              
+                document.getElementById('i_obraz_1').src = t_obraz_1[0]; // zmiana obrazka               
                }
 
              else {
-                document.getElementById('i_obraz_1').src = t_obraz_1[0];
-                v_obraz_1 = true;
+                 
+                 document.getElementById('i_obraz_1').src = t_obraz_1[1]; // zakrycie obrazka
+                 v_pytanie_1 = false;  // ustawienie na brak odpowiedzi prawidłowej               
+
                }
              }            
         </script>
