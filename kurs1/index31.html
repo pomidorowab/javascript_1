@@ -12,41 +12,14 @@
                 document.getElementById('i_obraz_1').src = t_obraz; // zmiana obrazka               
                }
 
-             else {
-                 
-
-                 
+             else {                 
                  v_pytanie_1 = true;  // odpowiedź prawidłowa
                  document.getElementById('i_obraz_1').src = t_obraz_1[1]; // zakrycie obrazka
                  
                  
-                         function PutFormIntoFieldset () {
-                            var fieldset = document.createElement ("fieldset");
-                            var legend = document.createElement ("legend");
-                            legend.innerHTML = "Personal Information";
-                            fieldset.appendChild (legend);
-
-                            var form = document.getElementById ("myForm");
-                            form.parentNode.insertBefore (fieldset, form);
-                            fieldset.appendChild (form);
-        }
+               
                  
-                 
-                 const form = document.querySelector("#myForm");
-const genderRadio = form.querySelectorAll("input[name=gender]");
-const resultElement = document.querySelector("#genderResult");
-
-for (const radio of genderRadio) {
-    radio.addEventListener("change", function() {
-        for (const radio of genderRadio) {
-            if (radio.checked) {
-                resultElement.innerText = radio.value;
-                break;
-            }
-        }
-    });
-}
-            
+                            
 
                }
              }            
@@ -55,23 +28,12 @@ for (const radio of genderRadio) {
     <body>
         <img id="i_obraz_1" src="obraz/title.png" onclick="f_click_obraz_1()">
         <br><br>
-                    <fieldset id=a1 name="a11"> 
-                        <legend>Wybierz</legend>
-                        <input type="radio" value="A" name="radio"> A
-                        <input type="radio" value="B" name="radio"> B
-                        <input type="radio" value="C" name="radio" checked> C
-                    </fieldset>
-        
-            <form id="myForm">
-        <label for="username">name:</label>
-        <input type="text" id="username" size="25" />
-        <br /><br />
-        <label for="password">password:</label>
-        <input type="text" id="password" size="25" />
-    </form>
-    <br /><br />
-    <button onclick="PutFormIntoFieldset ()">Put the form into a fieldset</button>
-        <br><br>
+                    <fieldset id=pyt name="a11"> 
+                        <legend>Pytanie:</legend>
+                        <input type="radio" value="A" name="radio"> Odpowiedź A
+                        <input type="radio" value="B" name="radio"> Odpowiedź B
+                        <input type="radio" value="C" name="radio"> Odpowiedź C
+                    </fieldset>       
         
 
     </body>
