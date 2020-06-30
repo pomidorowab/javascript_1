@@ -20,19 +20,29 @@
                  document.getElementById('i_obraz_1').src = t_obraz_1[1]; // zakrycie obrazka
                  document.getElementById('pyt').style.display = 'block';
                   }
-             }            
+             } 
+            
+            function send(){
+                alert("Your gender is female");
+            }
+            
+            
         </script>
     </head>
     <body>
         <img id="i_obraz_1" src="obraz/title.png" onclick="f_click_obraz_1()">
         <br><br>
-                    <fieldset id="pyt" style="display:none;"> 
-                        <legend>Pytanie:</legend>
-                        <input type="radio" value="A" name="radio"> Odpowiedź A<br>
-                        <input type="radio" value="B" name="radio"> Odpowiedź B<br>
-                        <input type="radio" value="C" name="radio"> Odpowiedź C<br><br>
-                        <input type="submit" id="spr1" value=" Zatwierdź "/>
-                    </fieldset>       
+        
+
+            <fieldset id="pyt" style="display:none;"> 
+                <legend>Pytanie:</legend>
+                <input type="radio" value="A" name="radio"> Odpowiedź A<br>
+                <input type="radio" value="B" name="radio"> Odpowiedź B<br>
+                <input type="radio" value="C" name="radio"> Odpowiedź C<br><br>
+                <input type="submit" id="spr1" value=" Zatwierdź" onclick="return send();">
+               
+             </fieldset>       
+            
         
 
     </body>
