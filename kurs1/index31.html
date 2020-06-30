@@ -32,7 +32,20 @@
         }
                  
                  
-                 
+                 const form = document.querySelector("#myForm");
+const genderRadio = form.querySelectorAll("input[name=gender]");
+const resultElement = document.querySelector("#genderResult");
+
+for (const radio of genderRadio) {
+    radio.addEventListener("change", function() {
+        for (const radio of genderRadio) {
+            if (radio.checked) {
+                resultElement.innerText = radio.value;
+                break;
+            }
+        }
+    });
+}
             
 
                }
@@ -58,6 +71,8 @@
     </form>
     <br /><br />
     <button onclick="PutFormIntoFieldset ()">Put the form into a fieldset</button>
+        <br><br>
+        
 
     </body>
 </html>
