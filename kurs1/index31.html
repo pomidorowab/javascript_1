@@ -16,7 +16,7 @@
 
              else { 
                  document.getElementById('pyt').style.display = 'block';
-                 v_pytanie_1 = true;  // odpowiedź prawidłowa               
+           
                   }
              } 
             
@@ -24,6 +24,7 @@
                 var pytanie = document.getElementsByName("pyt1");                
                 if (pytanie[1].checked == true) {
                     alert("Odpowiedź prawidłowa");
+                    v_pytanie_1 = true;  // odpowiedź prawidłowa    
                     document.getElementById('i_obraz_1').src = t_obraz_1[1]; // odkrycie obrazka
                     document.getElementById('pyt').style.display = 'none';//zakrycie pytania
                     
@@ -47,7 +48,7 @@
                 <input type="radio" name="pyt1"/> Odpowiedź A<br>
                 <input type="radio" name="pyt1"/> Odpowiedź B<br>
                 <input type="radio" name="pyt1"/> Odpowiedź C<br><br>
-                <input type="submit" value=" Zatwierdźz" onclick="return spr_odp_1();">
+                <input type="submit" value=" Zatwierdź" onclick="return spr_odp_1();">
                
              </fieldset>       
             
