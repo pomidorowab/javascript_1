@@ -5,9 +5,8 @@
             var t_obraz_1 = ['obraz/title_1.png','obraz/title_2.png','obraz/title_3.png','obraz/title_4.png','obraz/title_5.png'];     
             
             var v_pytanie_1 = false; //brak odpowiedzi na pytanie
-            
-            document.getElementById('pyt').style.display = 'none';
-            
+           
+          
             function f_click_obraz_1(){
               if (v_pytanie_1){
                 v_pytanie_1 = false;  // zmiana na brak odpowiedzi lub odpowiedź nieprawidłowa              
@@ -31,9 +30,9 @@
     <body>
         <img id="i_obraz_1" src="obraz/title.png" onclick="f_click_obraz_1()">
         <br><br>
-                    <fieldset id="pyt" name="a11"> 
+                    <fieldset id="pyt" name="a11" style="display:none;"> 
                         <legend>Pytanie:</legend>
-                        <input type="radio" value="A" name="radio"> Odpowiedź A
+                        <input type="radio" value="A" name="radio"> Odpowiedź Aa
                         <input type="radio" value="B" name="radio"> Odpowiedź B
                         <input type="radio" value="C" name="radio"> Odpowiedź C
                     </fieldset>       
