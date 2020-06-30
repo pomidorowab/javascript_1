@@ -8,16 +8,15 @@
            
           
             function f_click_obraz_1(){
-              if (v_pytanie_1){                  
-                  
-                  v_pytanie_1 = false;  // zmiana na brak odpowiedzi lub odpowiedź nieprawidłowa              
+              if (v_pytanie_1){
                   document.getElementById('i_obraz_1').src = t_obraz; // zakrycie obrazka  
-                  document.getElementById('pyt').style.display = 'none';//zakrycie pytania
+                  document.getElementById('pyt').style.display = 'none';//zakrycie pytania                  
+                  v_pytanie_1 = false;  // zmiana na brak odpowiedzi lub odpowiedź nieprawidłowa   
                }
 
-             else {                 
-                 v_pytanie_1 = true;  // odpowiedź prawidłowa
+             else { 
                  document.getElementById('pyt').style.display = 'block';
+                 v_pytanie_1 = true;  // odpowiedź prawidłowa               
                   }
              } 
             
@@ -48,7 +47,7 @@
                 <input type="radio" name="pyt1"/> Odpowiedź A<br>
                 <input type="radio" name="pyt1"/> Odpowiedź B<br>
                 <input type="radio" name="pyt1"/> Odpowiedź C<br><br>
-                <input type="submit" value=" Zatwierdź" onclick="return spr_odp_1();">
+                <input type="submit" value=" Zatwierdźz" onclick="return spr_odp_1();">
                
              </fieldset>       
             
