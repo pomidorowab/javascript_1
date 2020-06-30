@@ -14,18 +14,19 @@
 
              else {
                  
-                 
-                    const form = document.querySelector("#myForm");
-                    const genderRadio = form.querySelectorAll("input[name=gender]");
-                    const resultElement = document.querySelector("#genderResult");
+  <form name='formularz'>
+  <input type='text' name='tekst' onkeyup="przeslij()"><br>
+  <input type="checkbox" name="zaznacz" onchange="przeslij()" /><br>
+  <input type="radio" name="wybierz" value="opcja1" onchange="przeslij()" /><br>
+  <input type="radio" name="wybierz" value="opcja2" onchange="przeslij()" /><br>
+  <select name='lista' onchange="przeslij()">
+    <option>Pierwsza</option>
+    <option>Druga</option>
+  </select>
+  <br>
+  <textarea name="pole" onkeyup="przeslij()">Pole tekstowe</textarea>
+</form>               
 
-                    for (const radio of genderRadio) {
-                        radio.addEventListener("change", function() {
-                         for (const radio of genderRadio) {
-                        if (radio.checked) {
-                        resultElement.innerText = radio.value;
-                            break;
-                        } } }); }
                  
                  v_pytanie_1 = true;  // odpowiedź prawidłowa
                  document.getElementById('i_obraz_1').src = t_obraz_1[1]; // zakrycie obrazka
