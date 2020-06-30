@@ -1,23 +1,24 @@
 <html>
     <head>
         <script>
-var tImg = ['title_8.png','title_26.png'];
-        
-var vImg = true;
-function fSetImg(){
-    if (vImg){
-        document.getElementById('iImg').src = tImg[1];
-        vImg = false;
-    }
+            var tImg = ['title_8.png','title_26.png'];        
+            var vImg = true;
+            
+            function fSetImg(){
+              if (vImg){
+                 document.getElementById('iImg').src = tImg[1];
+                 vImg = false;
+               }
     
-    else {
-        document.getElementById('iImg').src = tImg[0];
-        vImg = true;
-    }
-}
+             else {
+                document.getElementById('iImg').src = tImg[0];
+                vImg = true;
+                  }
+              }            
         </script>
     </head>
     <body>
-        <img id="iImg" src="title_8.png" onclick="fSetImg()">
+        
+        <img id="tImg" src="title_8.png" onclick="fSetImg()">
     </body>
 </html>
