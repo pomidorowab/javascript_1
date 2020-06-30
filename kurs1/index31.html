@@ -1,13 +1,14 @@
 <html>
     <head>
         <script>
+            var t_obraz = 'title.png'
             var t_obraz_1 = ['title.png','title_8.png'];        
             var v_pytanie_1 = false; //brak odpowiedzi na pytanie
             
             function f_click_obraz_1(){
               if (v_pytanie_1){
                 v_pytanie_1 = false;  // odpowiedź prawidłowa              
-                document.getElementById('i_obraz_1').src = t_obraz_1[0]; // zmiana obrazka               
+                document.getElementById('i_obraz_1').src = t_obraz; // zmiana obrazka               
                }
 
              else {
