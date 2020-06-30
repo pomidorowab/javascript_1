@@ -4,14 +4,13 @@
             var t_obraz = 'obraz/title.png'
             var t_obraz_1 = ['obraz/title_1.png','obraz/title_2.png','obraz/title_3.png','obraz/title_4.png','obraz/title_5.png'];     
             
-            document.getElementById('pyt').style.display = 'none';
-            
             var v_pytanie_1 = false; //brak odpowiedzi na pytanie
             
             function f_click_obraz_1(){
               if (v_pytanie_1){
                 v_pytanie_1 = false;  // zmiana na brak odpowiedzi lub odpowiedź nieprawidłowa              
-                document.getElementById('i_obraz_1').src = t_obraz; // zmiana obrazka               
+                document.getElementById('i_obraz_1').src = t_obraz; // zmiana obrazka  
+                document.getElementById('pyt').style.display = 'none';
                }
 
              else {                 
