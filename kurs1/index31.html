@@ -12,7 +12,7 @@
                   
                   v_pytanie_1 = false;  // zmiana na brak odpowiedzi lub odpowiedź nieprawidłowa              
                   document.getElementById('i_obraz_1').src = t_obraz; // zakrycie obrazka  
-                  document.getElementById('pyt').style.display = 'none';
+                  document.getElementById('pyt').style.display = 'none';//zakrycie pytania
                }
 
              else {                 
@@ -26,9 +26,13 @@
                 if (pytanie[1].checked == true) {
                     alert("Odpowiedź prawidłowa");
                     document.getElementById('i_obraz_1').src = t_obraz_1[1]; // odkrycie obrazka
+                    document.getElementById('pyt').style.display = 'none';//zakrycie pytania
                     
                 }                 
-                  else {alert("Nieprawidłowa odpowiedź");}
+                  else {
+                      alert("Nieprawidłowa odpowiedź");
+                      document.getElementById('pyt').style.display = 'none';//zakrycie pytania
+                  }
             }
             
             
@@ -44,7 +48,7 @@
                 <input type="radio" name="pyt1"/> Odpowiedź A<br>
                 <input type="radio" name="pyt1"/> Odpowiedź B<br>
                 <input type="radio" name="pyt1"/> Odpowiedź C<br><br>
-                <input type="submit" value=" Zatwierdźz" onclick="return spr_odp_1();">
+                <input type="submit" value=" Zatwierdź" onclick="return spr_odp_1();">
                
              </fieldset>       
             
