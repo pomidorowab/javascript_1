@@ -11,22 +11,24 @@
               if (v_pytanie_1){                  
                   
                   v_pytanie_1 = false;  // zmiana na brak odpowiedzi lub odpowiedź nieprawidłowa              
-                  document.getElementById('i_obraz_1').src = t_obraz; // zmiana obrazka  
+                  document.getElementById('i_obraz_1').src = t_obraz; // zakrycie obrazka  
                   document.getElementById('pyt').style.display = 'none';
                }
 
              else {                 
                  v_pytanie_1 = true;  // odpowiedź prawidłowa
-                 document.getElementById('i_obraz_1').src = t_obraz_1[1]; // zakrycie obrazka
                  document.getElementById('pyt').style.display = 'block';
                   }
              } 
             
             function spr_odp_1(){
-                var pytanie = document.getElementsByName("pyt1");
-                
-                if (pytanie[0].checked == true) { alert("0");} 
-                  else {alert("?");}
+                var pytanie = document.getElementsByName("pyt1");                
+                if (pytanie[1].checked == true) {
+                    alert("Odpowiedź prawidłowa");
+                    document.getElementById('i_obraz_1').src = t_obraz_1[1]; // odkrycie obrazka
+                    
+                }                 
+                  else {alert("Nieprawidłowa odpowiedź");}
             }
             
             
@@ -42,7 +44,7 @@
                 <input type="radio" name="pyt1"/> Odpowiedź A<br>
                 <input type="radio" name="pyt1"/> Odpowiedź B<br>
                 <input type="radio" name="pyt1"/> Odpowiedź C<br><br>
-                <input type="submit" value=" Zatwierdź" onclick="return spr_odp_1();">
+                <input type="submit" value=" Zatwierdźz" onclick="return spr_odp_1();">
                
              </fieldset>       
             
