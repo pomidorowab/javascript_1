@@ -18,7 +18,18 @@
                  
                  v_pytanie_1 = true;  // odpowiedź prawidłowa
                  document.getElementById('i_obraz_1').src = t_obraz_1[1]; // zakrycie obrazka
-                 document.getElementById('a1').legend='dupa1';
+                 
+                 
+                         function PutFormIntoFieldset () {
+                            var fieldset = document.createElement ("fieldset");
+                            var legend = document.createElement ("legend");
+                            legend.innerHTML = "Personal Information";
+                            fieldset.appendChild (legend);
+
+                            var form = document.getElementById ("myForm");
+                            form.parentNode.insertBefore (fieldset, form);
+                            fieldset.appendChild (form);
+        }
                  
                  
                  
@@ -37,6 +48,16 @@
                         <input type="radio" value="B" name="radio"> B
                         <input type="radio" value="C" name="radio" checked> C
                     </fieldset>
+        
+            <form id="myForm">
+        <label for="username">name:</label>
+        <input type="text" id="username" size="25" />
+        <br /><br />
+        <label for="password">password:</label>
+        <input type="text" id="password" size="25" />
+    </form>
+    <br /><br />
+    <button onclick="PutFormIntoFieldset ()">Put the form into a fieldset</button>
 
     </body>
 </html>
