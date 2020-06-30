@@ -14,10 +14,7 @@
 
              else {
                  
-                 document.getElementById("pole").value='Dupa';
-                 
-                 var myHeading = document.querySelector('h1');
-                 myHeading.textContent = 'Hello world!';
+
                  
                  v_pytanie_1 = true;  // odpowiedź prawidłowa
                  document.getElementById('i_obraz_1').src = t_obraz_1[1]; // zakrycie obrazka
@@ -32,7 +29,13 @@
     </head>
     <body>
         <img id="i_obraz_1" src="obraz/title.png" onclick="f_click_obraz_1()">
-        <input type="text" id="pole" value="Kubuś Puchatek">
+        <br><br>
+                    <fieldset>
+                        <legend>Wybierz</legend>
+                        <input type="radio" value="A" name="radio"> A
+                        <input type="radio" value="B" name="radio"> B
+                        <input type="radio" value="C" name="radio" checked> C
+                    </fieldset>
 
     </body>
 </html>
