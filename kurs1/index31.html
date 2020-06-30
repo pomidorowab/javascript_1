@@ -2,7 +2,9 @@
     <head>
         <script>
             var t_obraz = 'obraz/title.png'
-            var t_obraz_1 = ['obraz/title_1.png','obraz/title_2.png','obraz/title_3.png','obraz/title_4.png','obraz/title_5.png'];        
+            var t_obraz_1 = ['obraz/title_1.png','obraz/title_2.png','obraz/title_3.png','obraz/title_4.png','obraz/title_5.png'];     
+            
+            document.getElementById('pyt').style.display = 'none';
             
             var v_pytanie_1 = false; //brak odpowiedzi na pytanie
             
@@ -15,7 +17,7 @@
              else {                 
                  v_pytanie_1 = true;  // odpowiedź prawidłowa
                  document.getElementById('i_obraz_1').src = t_obraz_1[1]; // zakrycie obrazka
-                 document.getElementById('pyt').style.display = 'none';
+                 document.getElementById('pyt').style.display = 'block';
                  
                
                  
