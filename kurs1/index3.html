@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+var tImg = ['1.png','2.png'];
+        
+var vImg = true;
+function fSetImg(){
+    if (vImg){
+        document.getElementById('iImg').src = tImg[1];
+        vImg = false;
+    }
+    
+    else {
+        document.getElementById('iImg').src = tImg[0];
+        vImg = true;
+    }
+}
+        </script>
+    </head>
+    <body>
+        <img id="iImg" src="1.png" onclick="fSetImg()">
+    </body>
+</html>
