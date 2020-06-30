@@ -25,19 +25,8 @@
             function spr_odp_1(){
                 var pytanie = document.getElementsByName("pyt1");
                 
-                if (pytanie[0].checked == true) {
-                    alert("0");
-                } 
-                else if (pytnie[1].checked == true) {              
-                    alert("1");
-                } 
-                else if (pytnie[2].checked == true) {
-                    alert("2");  
-                }                             
-                else 
-                    {                    
-                    alert("?");
-                }
+                if (pytanie[0].checked == true) { alert("0");} 
+                  else {alert("?");}
             }
             
             
@@ -53,7 +42,7 @@
                 <input type="radio" name="pyt1"/> Odpowiedź A<br>
                 <input type="radio" name="pyt1"/> Odpowiedź B<br>
                 <input type="radio" name="pyt1"/> Odpowiedź C<br><br>
-                <input type="submit" value=" Zatwierdźzz" onclick="return spr_odp_1();">
+                <input type="submit" value=" Zatwierdź" onclick="return spr_odp_1();">
                
              </fieldset>       
             
