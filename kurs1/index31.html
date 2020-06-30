@@ -6,12 +6,12 @@
             
             function f_click_obraz_1(){
               if (v_pytanie_1){
-                v_pytanie_1 = true;  // odpowiedź prawidłowa              
+                v_pytanie_1 = false;  // odpowiedź prawidłowa              
                 document.getElementById('i_obraz_1').src = t_obraz_1[0]; // zmiana obrazka               
                }
 
              else {
-                 v_pytanie_1 = false;  // ustawienie na brak odpowiedzi prawidłowej                   
+                 v_pytanie_1 = true;  // ustawienie na brak odpowiedzi prawidłowej                   
                  document.getElementById('i_obraz_1').src = t_obraz_1[1]; // zakrycie obrazka
             
 
