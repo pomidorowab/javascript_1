@@ -14,12 +14,12 @@
             function f_click_obraz_1(){
               if (v_pytanie_1){
                   document.getElementById('i_obraz_1').src = t_obraz; // zakrycie obrazka  
-                  document.getElementById('pyt').style.display = 'none';//zakrycie pytania                  
+                  document.getElementById('pyt1').style.display = 'none';//zakrycie pytania                  
                   v_pytanie_1 = false;  // zmiana na brak odpowiedzi lub odpowiedź nieprawidłowa   
                }
 
              else { 
-                 document.getElementById('pyt').style.display = 'block';
+                 document.getElementById('pyt1').style.display = 'block';
                   }
              }            
 
@@ -29,12 +29,12 @@
                     alert("Odpowiedź prawidłowa");
                     v_pytanie_1 = true;  // odpowiedź prawidłowa    
                     document.getElementById('i_obraz_1').src = t_obraz_1[1]; // odkrycie obrazka
-                    document.getElementById('pyt').style.display = 'none';//zakrycie pytania
+                    document.getElementById('pyt1').style.display = 'none';//zakrycie pytania
                 }                 
 
                   else {
                       alert("Nieprawidłowa odpowiedź");
-                      document.getElementById('pyt').style.display = 'none';//zakrycie pytania
+                      document.getElementById('pyt1').style.display = 'none';//zakrycie pytania
                   }
             }
         </script>
@@ -55,7 +55,7 @@
         <img id="i_obraz_6" src="obraz/title.jpg" width="163" height=auto onclick="f_click_obraz_6()"> 
           
         <br><br>
-            <fieldset id="pyt" style="display:none;"> 
+            <fieldset id="pyt1" style="display:none;"> 
                 <legend>Pytanie:</legend>
                 <input type="radio" name="pyt1"/> Odpowiedź A<br>
                 <input type="radio" name="pyt1"/> Odpowiedź B<br>
