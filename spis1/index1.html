@@ -1,0 +1,64 @@
+﻿<html>
+    <head>
+        <script>
+            var t_obraz = 'obraz/title.png'
+            var t_obraz_1 = ['obraz/title_1.png','obraz/title_2.png','obraz/title_3.png','obraz/title_4.png','obraz/title_5.png'];     
+
+            var v_pytanie_1 = false; //brak odpowiedzi na pytanie
+            function f_click_obraz_1(){
+              if (v_pytanie_1){
+                  document.getElementById('i_obraz_1').src = t_obraz; // zakrycie obrazka  
+                  document.getElementById('pyt').style.display = 'none';//zakrycie pytania                  
+                  v_pytanie_1 = false;  // zmiana na brak odpowiedzi lub odpowiedź nieprawidłowa   
+               }
+
+             else { 
+                 document.getElementById('pyt').style.display = 'block';
+                  }
+             }            
+
+            function spr_odp_1(){
+                var pytanie = document.getElementsByName("pyt1");                
+                if (pytanie[1].checked == true) {
+                    alert("Odpowiedź prawidłowa");
+                    v_pytanie_1 = true;  // odpowiedź prawidłowa    
+                    document.getElementById('i_obraz_1').src = t_obraz_1[1]; // odkrycie obrazka
+                    document.getElementById('pyt').style.display = 'none';//zakrycie pytania
+                }                 
+
+                  else {
+                      alert("Nieprawidłowa odpowiedź");
+                      document.getElementById('pyt').style.display = 'none';//zakrycie pytania
+                  }
+            }
+        </script>
+    </head>
+<body>
+    <!--<body style="background-color:#C5EBD0;">
+      <div style="width:800px; height:300px; margin:0 auto; background-color:#C5EBE0;">-->
+       <div>
+          <br>
+          <img src="obraz/title.png">    
+          <img id="x1" src="obraz/plakat1.jpg" onclick="f_click_obraz_1()">
+
+          <br><br>
+          
+      aaabb
+           
+            
+        <img id="i_obraz_1" src="obraz/plakat1.jpg" onclick="f_click_obraz_1()">
+        <img id="i_obraz_2" src="obraz/title.png" onclick="f_click_obraz_1()">
+        <img id="i_obraz_3" src="obraz/title.png" onclick="f_click_obraz_1()">
+
+
+        <br><br>
+            <fieldset id="pyt" style="display:none;"> 
+                <legend>Pytanie:</legend>
+                <input type="radio" name="pyt1"/> Odpowiedź A<br>
+                <input type="radio" name="pyt1"/> Odpowiedź B<br>
+                <input type="radio" name="pyt1"/> Odpowiedź C<br><br>
+                <input type="submit" value=" Zatwierdź" onclick="return spr_odp_1();">
+             </fieldset>       
+       </div>
+    </body>
+</html>  
