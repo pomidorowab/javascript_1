@@ -11,34 +11,43 @@
             var v_pytanie_5 = false; //brak odpowiedzi na pytanie
             var v_pytanie_6 = false; //brak odpowiedzi na pytanie            
             
-            function f_click_obraz_1(){
-              if (v_pytanie_1){
-                  document.getElementById('i_obraz_1').src = t_obraz; // zakrycie obrazka  
-                  document.getElementById('pyt1').style.display = 'none';//zakrycie pytania                  
-                  v_pytanie_1 = false;  // zmiana na brak odpowiedzi lub odpowiedź nieprawidłowa   
+            function f_click_obraz_2(){
+              if (v_pytanie_2){
+                  document.getElementById('i_obraz_2').src = t_obraz; // zakrycie obrazka  
+                  document.getElementById('pyt2').style.display = 'none';//zakrycie pytania                  
+                  v_pytanie_2 = false;  // zmiana na brak odpowiedzi lub odpowiedź nieprawidłowa   
                }
 
              else { 
-                 document.getElementById('pyt1').style.display = 'block';
+                 document.getElementById('pyt2').style.display = 'block';
                   }
              }            
 
-            function spr_odp_1(){
-                var pytanie = document.getElementsByName("pyt1");                
-                if (pytanie[1].checked == true) {
+            function spr_odp_2(){
+                var pytanie = document.getElementsByName("pyt2");                
+                if (pytanie[0].checked == true) {
                     alert("Odpowiedź prawidłowa");
-                    v_pytanie_1 = true;  // odpowiedź prawidłowa    
-                    document.getElementById('i_obraz_1').src = t_obraz_1[1]; // odkrycie obrazka
-                    document.getElementById('pyt1').style.display = 'none';//zakrycie pytania
+                    v_pytanie_2 = true;  // odpowiedź prawidłowa    
+                    document.getElementById('i_obraz_2').src = t_obraz_1[2]; // odkrycie obrazka
+                    document.getElementById('pyt2').style.display = 'none';//zakrycie pytania
                 }                 
 
                   else {
                       alert("Nieprawidłowa odpowiedź");
-                      document.getElementById('pyt1').style.display = 'none';//zakrycie pytania
+                      document.getElementById('pyt2').style.display = 'none';//zakrycie pytania
                   }
             }
         </script>
     </head>
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <body style="background-color:#C5EBD0;">
       <div style="width:1000px; height:800px; margin:0 auto;background-color:#b1e3bf;">
           <img src="obraz/plakat.jpg" width="1000" height=auto>
@@ -58,12 +67,11 @@
           
           <div style="width:500px; height:200px; margin:0 auto;">
               
-            <fieldset id="pyt1" style="display:none;"> 
-                <legend>Pytanie:</legend>
-                <input type="radio" name="pyt1"/> Odpowiedź A<br>
-                <input type="radio" name="pyt1"/> Odpowiedź B<br>
-                <input type="radio" name="pyt1"/> Odpowiedź C<br><br>
-                <input type="submit" value=" Zatwierdź" onclick="return spr_odp_1();">
+            <fieldset id="pyt2" style="display:none;"> 
+                <legend>Pytanie: Czy Spis Rolny jest badaniem pełnym ?</legend>
+                <input type="radio" name="pyt2"/> Tak<br>
+                <input type="radio" name="pyt2"/> Nie<br>                
+                <input type="submit" value=" Zatwierdź" onclick="return spr_odp_2();">
              </fieldset>       
               
           </div>    
