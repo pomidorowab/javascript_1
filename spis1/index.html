@@ -34,6 +34,30 @@
                  document.getElementById('pyt4').style.display = 'block';
                   }
              }
+            
+             function f_click_obraz_5(){
+              if (v_pytanie_5){
+                  document.getElementById('i_obraz_5').src = t_obraz; // zakrycie obrazka  
+                  document.getElementById('pyt5').style.display = 'none';//zakrycie pytania                  
+                  v_pytanie_5 = false;  // zmiana na brak odpowiedzi lub odpowiedź nieprawidłowa   
+               }
+
+             else { 
+                 document.getElementById('pyt5').style.display = 'block';
+                  }
+             }
+            
+            function f_click_obraz_6(){
+              if (v_pytanie_6){
+                  document.getElementById('i_obraz_6').src = t_obraz; // zakrycie obrazka  
+                  document.getElementById('pyt6').style.display = 'none';//zakrycie pytania                  
+                  v_pytanie_6 = false;  // zmiana na brak odpowiedzi lub odpowiedź nieprawidłowa   
+               }
+
+             else { 
+                 document.getElementById('pyt6').style.display = 'block';
+                  }
+             }
 
             function spr_odp_2(){
                 var pytanie = document.getElementsByName("pyt2");                
@@ -62,6 +86,36 @@
                   else {
                       alert("Nieprawidłowa odpowiedź");
                       document.getElementById('pyt4').style.display = 'none';//zakrycie pytania
+                  }
+            }
+            
+            function spr_odp_5(){
+                var pytanie = document.getElementsByName("pyt5");                
+                if (pytanie[0].checked == true) {
+                    alert("Odpowiedź prawidłowa");
+                    v_pytanie_5 = true;  // odpowiedź prawidłowa    
+                    document.getElementById('i_obraz_5').src = t_obraz_1[5]; // odkrycie obrazka
+                    document.getElementById('pyt5').style.display = 'none';//zakrycie pytania
+                }                 
+
+                  else {
+                      alert("Nieprawidłowa odpowiedź");
+                      document.getElementById('pyt5').style.display = 'none';//zakrycie pytania
+                  }
+            }
+            
+            function spr_odp_6(){
+                var pytanie = document.getElementsByName("pyt6");                
+                if (pytanie[0].checked == true) {
+                    alert("Odpowiedź prawidłowa");
+                    v_pytanie_6 = true;  // odpowiedź prawidłowa    
+                    document.getElementById('i_obraz_6').src = t_obraz_1[6]; // odkrycie obrazka
+                    document.getElementById('pyt6').style.display = 'none';//zakrycie pytania
+                }                 
+
+                  else {
+                      alert("Nieprawidłowa odpowiedź");
+                      document.getElementById('pyt6').style.display = 'none';//zakrycie pytania
                   }
             }
         </script>
@@ -107,6 +161,21 @@
                 <input type="radio" name="pyt4"/> Od 1 września do 30 listopada 2020 r.<br>                
                 <input type="radio" name="pyt4"/> Od 1 września do 31 grudnia 2020 r.<br>                
                 <input type="submit" value=" Zatwierdź" onclick="return spr_odp_4();">
+             </fieldset>  
+
+              <fieldset id="pyt5" style="display:none;"> 
+                <legend>Według jakiego stanu przeprowadza się Spis Rolny ?</legend>
+                <input type="radio" name="pyt5"/> Wg stanu w dniu 1 czerwca 2020 r.<br>
+                <input type="radio" name="pyt5"/> Wg stanu w dniu 1 września 2020 r.<br>                
+                <input type="radio" name="pyt5"/> Wg stanu w dniu, w którym dokonuje się spisu<br>                
+                <input type="submit" value=" Zatwierdź" onclick="return spr_odp_5();">
+             </fieldset>  
+              
+             <fieldset id="pyt6" style="display:none;"> 
+                <legend>Czy udział w spisie rolnym jest obowiązkowy ?</legend>
+                <input type="radio" name="pyt6"/> Tak<br>
+                <input type="radio" name="pyt6"/> Nie<br>                
+                <input type="submit" value=" Zatwierdź" onclick="return spr_odp_6();">
              </fieldset>  
               
           </div>  
