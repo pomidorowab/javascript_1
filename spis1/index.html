@@ -1,4 +1,4 @@
-<html>
+<html>    
     <head>
         <script>
             var t_obraz = 'obraz/title.jpg'
@@ -9,9 +9,19 @@
             var v_pytanie_3 = false; //brak odpowiedzi na pytanie
             var v_pytanie_4 = false; //brak odpowiedzi na pytanie
             var v_pytanie_5 = false; //brak odpowiedzi na pytanie
-            var v_pytanie_6 = false; //brak odpowiedzi na pytanie            
+            var v_pytanie_6 = false; //brak odpowiedzi na pytanie         
+            
+            function zakryj_pytania(){
+              document.getElementById('pyt1').style.display = 'none';                  
+              document.getElementById('pyt2').style.display = 'none';                  
+              document.getElementById('pyt3').style.display = 'none';                  
+              document.getElementById('pyt4').style.display = 'none';                  
+              document.getElementById('pyt5').style.display = 'none';                  
+              document.getElementById('pyt6').style.display = 'none';                                  
+            }
             
             function f_click_obraz_1(){
+              zakryj_pytania()  
               if (v_pytanie_1){
                   document.getElementById('i_obraz_1').src = t_obraz; // zakrycie obrazka  
                   document.getElementById('pyt1').style.display = 'none';//zakrycie pytania                  
@@ -24,6 +34,7 @@
              }
             
             function f_click_obraz_2(){
+              zakryj_pytania()
               if (v_pytanie_2){
                   document.getElementById('i_obraz_2').src = t_obraz; // zakrycie obrazka  
                   document.getElementById('pyt2').style.display = 'none';//zakrycie pytania                  
@@ -36,6 +47,7 @@
              }    
               
             function f_click_obraz_3(){
+              zakryj_pytania()  
               if (v_pytanie_3){
                   document.getElementById('i_obraz_3').src = t_obraz; // zakrycie obrazka  
                   document.getElementById('pyt3').style.display = 'none';//zakrycie pytania                  
@@ -48,10 +60,11 @@
              }
             
               function f_click_obraz_4(){
-              if (v_pytanie_4){
-                  document.getElementById('i_obraz_4').src = t_obraz; // zakrycie obrazka  
-                  document.getElementById('pyt4').style.display = 'none';//zakrycie pytania                  
-                  v_pytanie_4 = false;  // zmiana na brak odpowiedzi lub odpowiedź nieprawidłowa   
+                zakryj_pytania()  
+                if (v_pytanie_4){
+                    document.getElementById('i_obraz_4').src = t_obraz; // zakrycie obrazka  
+                    document.getElementById('pyt4').style.display = 'none';//zakrycie pytania                  
+                    v_pytanie_4 = false;  // zmiana na brak odpowiedzi lub odpowiedź nieprawidłowa   
                }
 
              else { 
@@ -60,18 +73,20 @@
              }
             
              function f_click_obraz_5(){
-              if (v_pytanie_5){
-                  document.getElementById('i_obraz_5').src = t_obraz; // zakrycie obrazka  
-                  document.getElementById('pyt5').style.display = 'none';//zakrycie pytania                  
-                  v_pytanie_5 = false;  // zmiana na brak odpowiedzi lub odpowiedź nieprawidłowa   
-               }
+                zakryj_pytania()
+                if (v_pytanie_5){
+                   document.getElementById('i_obraz_5').src = t_obraz; // zakrycie obrazka  
+                   document.getElementById('pyt5').style.display = 'none';//zakrycie pytania                  
+                   v_pytanie_5 = false;  // zmiana na brak odpowiedzi lub odpowiedź nieprawidłowa   
+                }
 
-             else { 
-                 document.getElementById('pyt5').style.display = 'block';
-                  }
+                else { 
+                   document.getElementById('pyt5').style.display = 'block';
+                }
              }
             
             function f_click_obraz_6(){
+              zakryj_pytania()
               if (v_pytanie_6){
                   document.getElementById('i_obraz_6').src = t_obraz; // zakrycie obrazka  
                   document.getElementById('pyt6').style.display = 'none';//zakrycie pytania                  
