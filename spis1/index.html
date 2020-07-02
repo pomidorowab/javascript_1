@@ -21,7 +21,19 @@
              else { 
                  document.getElementById('pyt2').style.display = 'block';
                   }
-             }            
+             }        
+            
+              function f_click_obraz_4(){
+              if (v_pytanie_4){
+                  document.getElementById('i_obraz_4').src = t_obraz; // zakrycie obrazka  
+                  document.getElementById('pyt4').style.display = 'none';//zakrycie pytania                  
+                  v_pytanie_4 = false;  // zmiana na brak odpowiedzi lub odpowiedź nieprawidłowa   
+               }
+
+             else { 
+                 document.getElementById('pyt4').style.display = 'block';
+                  }
+             }
 
             function spr_odp_2(){
                 var pytanie = document.getElementsByName("pyt2");                
@@ -35,6 +47,21 @@
                   else {
                       alert("Nieprawidłowa odpowiedź");
                       document.getElementById('pyt2').style.display = 'none';//zakrycie pytania
+                  }
+            }
+            
+            function spr_odp_4(){
+                var pytanie = document.getElementsByName("pyt4");                
+                if (pytanie[1].checked == true) {
+                    alert("Odpowiedź prawidłowa");
+                    v_pytanie_4 = true;  // odpowiedź prawidłowa    
+                    document.getElementById('i_obraz_4').src = t_obraz_1[4]; // odkrycie obrazka
+                    document.getElementById('pyt4').style.display = 'none';//zakrycie pytania
+                }                 
+
+                  else {
+                      alert("Nieprawidłowa odpowiedź");
+                      document.getElementById('pyt4').style.display = 'none';//zakrycie pytania
                   }
             }
         </script>
@@ -68,11 +95,19 @@
           <div style="width:500px; height:200px; margin:0 auto;background-color:#C5EBD0;">
               
             <fieldset id="pyt2" style="display:none;"> 
-                <legend>Pytanie: Czy Spis Rolny jest badaniem pełnym ?</legend>
+                <legend>Czy Spis Rolny jest badaniem pełnym ?</legend>
                 <input type="radio" name="pyt2"/> Tak<br>
                 <input type="radio" name="pyt2"/> Nie<br>                
                 <input type="submit" value=" Zatwierdź" onclick="return spr_odp_2();">
-             </fieldset>       
+             </fieldset>    
+              
+             <fieldset id="pyt4" style="display:none;"> 
+                <legend>W jakim terminie przeprowadzany jest PSR 2020 ?</legend>
+                <input type="radio" name="pyt4"/> Od 1 września do 30 września 2020 r.<br>
+                <input type="radio" name="pyt4"/> Od 1 września do 30 listopada 2020 r.<br>                
+                <input type="radio" name="pyt4"/> Od 1 września do 31 grudnia 2020 r.<br>                
+                <input type="submit" value=" Zatwierdź" onclick="return spr_odp_4();">
+             </fieldset>  
               
           </div>  
           
