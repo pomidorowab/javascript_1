@@ -17,7 +17,9 @@
               document.getElementById('pyt3').style.display = 'none';                  
               document.getElementById('pyt4').style.display = 'none';                  
               document.getElementById('pyt5').style.display = 'none';                  
-              document.getElementById('pyt6').style.display = 'none';                                  
+              document.getElementById('pyt6').style.display = 'none';         
+              
+              document.getElementById('tekst_eduk_1').style.display = 'none';         
             }
             
             function f_click_obraz_1(){
@@ -26,10 +28,12 @@
                   document.getElementById('i_obraz_1').src = t_obraz; // zakrycie obrazka  
                   document.getElementById('pyt1').style.display = 'none';//zakrycie pytania                  
                   v_pytanie_1 = false;  // zmiana na brak odpowiedzi lub odpowiedź nieprawidłowa   
+                  
                }
 
              else { 
                  document.getElementById('pyt1').style.display = 'block';
+                 document.getElementById('tekst_eduk_1').style.display = 'block';         
                   }
              }
             
@@ -225,7 +229,7 @@
                 <input type="checkbox" name="pyt1"/> Ustawa o statystyce publicznej<br>
                 <input type="checkbox" name="pyt1"/> Ustawa o powszechnym spisie rolnym<br>      
                 <input type="checkbox" name="pyt1"/> Rozporządzenia Parlamentu Europejskiego i Rady (UE) w sprawie zintegrowanych statystyk dotyczących gospodarstw rolnych<br><br>      
-                <center><input type="submit" width = 150 value="Zatwierdź" onclick="return spr_odp_1();"></center>
+                <center><input type="submit" value="Zatwierdź" onclick="return spr_odp_1();"></center>
              </fieldset>   
               
             <fieldset id="pyt2" style="display:none;"> 
@@ -264,9 +268,15 @@
                 <input type="radio" name="pyt6"/> Tak<br>
                 <input type="radio" name="pyt6"/> Nie<br><br>                
                 <center><input type="submit" value=" Zatwierdź" onclick="return spr_odp_6();"></center>
-             </fieldset>  
-              
+             </fieldset>                
           </div>  
+          
+          <br><br>
+          <div style="width:500px; height:200px; margin:0 auto;background-color:#C5EBD0;">              
+              <h2 id="tekst_eduk_1"> Ala ma kota
+              <h2>    
+              
+          </div>    
           
        </div>
     </body>
