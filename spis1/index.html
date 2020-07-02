@@ -11,6 +11,18 @@
             var v_pytanie_5 = false; //brak odpowiedzi na pytanie
             var v_pytanie_6 = false; //brak odpowiedzi na pytanie            
             
+            function f_click_obraz_1(){
+              if (v_pytanie_1){
+                  document.getElementById('i_obraz_1').src = t_obraz; // zakrycie obrazka  
+                  document.getElementById('pyt1').style.display = 'none';//zakrycie pytania                  
+                  v_pytanie_1 = false;  // zmiana na brak odpowiedzi lub odpowiedź nieprawidłowa   
+               }
+
+             else { 
+                 document.getElementById('pyt1').style.display = 'block';
+                  }
+             }
+            
             function f_click_obraz_2(){
               if (v_pytanie_2){
                   document.getElementById('i_obraz_2').src = t_obraz; // zakrycie obrazka  
@@ -21,7 +33,19 @@
              else { 
                  document.getElementById('pyt2').style.display = 'block';
                   }
-             }        
+             }    
+              
+            function f_click_obraz_3(){
+              if (v_pytanie_3){
+                  document.getElementById('i_obraz_3').src = t_obraz; // zakrycie obrazka  
+                  document.getElementById('pyt3').style.display = 'none';//zakrycie pytania                  
+                  v_pytanie_3 = false;  // zmiana na brak odpowiedzi lub odpowiedź nieprawidłowa   
+               }
+
+             else { 
+                 document.getElementById('pyt3').style.display = 'block';
+                  }
+             }
             
               function f_click_obraz_4(){
               if (v_pytanie_4){
@@ -58,6 +82,22 @@
                  document.getElementById('pyt6').style.display = 'block';
                   }
              }
+            
+             
+            function spr_odp_1(){
+                var pytanie = document.getElementsByName("pyt1");                
+                if (pytanie[0].checked == true && pytanie[1].checked == true && pytanie[2].checked == true) {
+                    alert("Odpowiedź w pełni prawidłowa");
+                    v_pytanie_1 = true;  // odpowiedź prawidłowa    
+                    document.getElementById('i_obraz_1').src = t_obraz_1[1]; // odkrycie obrazka
+                    document.getElementById('pyt1').style.display = 'none';//zakrycie pytania
+                }                 
+
+                  else {
+                      alert("Nieprawidłowa odpowiedź lub niewpełni prawidłowa odpowiedź");
+                      document.getElementById('pyt1').style.display = 'none';//zakrycie pytania
+                  }
+            }
 
             function spr_odp_2(){
                 var pytanie = document.getElementsByName("pyt2");                
@@ -148,12 +188,30 @@
           
           <div style="width:500px; height:200px; margin:0 auto;background-color:#C5EBD0;">
               
+  
+              
+          <fieldset id="pyt1" style="display:none;"> 
+                <legend>Jakie są podstawy prawne Spisu Rolnego ?</legend>
+                <input type="checkbox" name="pyt1"/> Ustawa o statystyce publicznej<br>
+                <input type="checkbox" name="pyt1"/> Ustawa o powszechnym spisie rolnym<br>      
+                <input type="checkbox" name="pyt1"/> Rozporządzenia Parlamentu Europejskiego i Rady (UE) w sprawie zintegrowanych statystyk dotyczących gospodarstw rolnych<br>      
+                <input type="submit" value=" Zatwierdź" onclick="return spr_odp_1();">
+             </fieldset>   
+              
             <fieldset id="pyt2" style="display:none;"> 
                 <legend>Czy Spis Rolny jest badaniem pełnym ?</legend>
                 <input type="radio" name="pyt2"/> Tak<br>
                 <input type="radio" name="pyt2"/> Nie<br>                
                 <input type="submit" value=" Zatwierdź" onclick="return spr_odp_2();">
-             </fieldset>    
+             </fieldset>  
+            
+              <fieldset id="pyt3" style="display:none;"> 
+                <legend>Kogo obejmuje Spis Rolny?</legend>
+                <input type="checkbox" name="pyt3"/> Gospodarstwa osób fizycznych (gospodarstwa indywidualne)<br>
+                <input type="checkbox" name="pyt3"/> Gospodarstwa osób prawnych<br>      
+                <input type="checkbox" name="pyt3"/> Gospodarstwa jednostek organizacyjnych niemających osobowości prawnej<br>      
+                <input type="submit" value=" Zatwierdź" onclick="return spr_odp_3();">
+             </fieldset> 
               
              <fieldset id="pyt4" style="display:none;"> 
                 <legend>W jakim terminie przeprowadzany jest PSR 2020 ?</legend>
