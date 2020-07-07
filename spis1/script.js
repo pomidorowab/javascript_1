@@ -17,6 +17,7 @@
               document.getElementById('pyt5').style.display = 'none';                  
               document.getElementById('pyt6').style.display = 'none';         
               
+              document.getElementById('tekst_eduk_0').style.display = 'none'; 
               document.getElementById('tekst_eduk_1').style.display = 'none';  
               document.getElementById('tekst_eduk_2').style.display = 'none';         
               document.getElementById('tekst_eduk_3').style.display = 'none';         
