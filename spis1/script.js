@@ -17,7 +17,6 @@
               document.getElementById('pyt5').style.display = 'none';                  
               document.getElementById('pyt6').style.display = 'none';         
               
-              document.getElementById('tekst_eduk_0').style.display = 'none'; 
               document.getElementById('tekst_eduk_1').style.display = 'none';  
               document.getElementById('tekst_eduk_2').style.display = 'none';         
               document.getElementById('tekst_eduk_3').style.display = 'none';         
@@ -106,6 +105,7 @@
                     v_pytanie_1 = true;  // odpowiedź prawidłowa    
                     document.getElementById('i_obraz_1').src = t_obrazy[1]; // odkrycie obrazka
                     document.getElementById('pyt1').style.display = 'none';//zakrycie pytania
+                    document.getElementById('tekst_eduk_0').style.display = 'none';         
                     document.getElementById('tekst_eduk_1').style.display = 'block'; 
                 }                 
                   else {
@@ -121,6 +121,7 @@
                     v_pytanie_2 = true;  // odpowiedź prawidłowa    
                     document.getElementById('i_obraz_2').src = t_obrazy[2]; // odkrycie obrazka
                     document.getElementById('pyt2').style.display = 'none';//zakrycie pytania
+                    document.getElementById('tekst_eduk_0').style.display = 'none';         
                     document.getElementById('tekst_eduk_2').style.display = 'block'; 
                 }                 
                   else {
@@ -136,6 +137,7 @@
                     v_pytanie_3 = true;  // odpowiedź prawidłowa    
                     document.getElementById('i_obraz_3').src = t_obrazy[3]; // odkrycie obrazka
                     document.getElementById('pyt3').style.display = 'none';//zakrycie pytania
+                    document.getElementById('tekst_eduk_0').style.display = 'none';         
                     document.getElementById('tekst_eduk_3').style.display = 'block'; 
                 }                 
                   else {
@@ -151,6 +153,7 @@
                     v_pytanie_4 = true;  // odpowiedź prawidłowa    
                     document.getElementById('i_obraz_4').src = t_obrazy[4]; // odkrycie obrazka
                     document.getElementById('pyt4').style.display = 'none';//zakrycie pytania
+                    document.getElementById('tekst_eduk_0').style.display = 'none';         
                     document.getElementById('tekst_eduk_4').style.display = 'block'; 
                 }                 
                    else {
@@ -166,6 +169,7 @@
                     v_pytanie_5 = true;  // odpowiedź prawidłowa    
                     document.getElementById('i_obraz_5').src = t_obrazy[5]; // odkrycie obrazka
                     document.getElementById('pyt5').style.display = 'none';//zakrycie pytania
+                    document.getElementById('tekst_eduk_0').style.display = 'none'; 
                     document.getElementById('tekst_eduk_5').style.display = 'block'; 
                 }                 
                   else {
@@ -181,6 +185,7 @@
                     v_pytanie_6 = true;  // odpowiedź prawidłowa    
                     document.getElementById('i_obraz_6').src = t_obrazy[6]; // odkrycie obrazka
                     document.getElementById('pyt6').style.display = 'none';//zakrycie pytania
+                    document.getElementById('tekst_eduk_0').style.display = 'none';         
                     document.getElementById('tekst_eduk_6').style.display = 'block'; 
                 }                 
                   else {
