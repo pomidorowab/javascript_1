@@ -194,31 +194,42 @@
         </script>
         
         <style>
-        #blok1 {
-        background-color:#b1e3bf;               
-      }
+          #blok1 {
+            background-color:#b1e3bf;               
+          }
 
-      #blok11 {
-        float:left;
-        width:48%;
-        background-color:#b1e3bf;
-      }
+          #blok11 {
+            float:left;
+            width:48%;
+            background-color:#b1e3bf;
+          }
 
-      #blok12 {
-        float:right;
-        width:52%;
-        background-color:#b1e3bf;
-      }
+          #blok12 {
+            float:right;
+            width:50%;
+            background-color:#b1e3bf;
+            font-family: Fira Sans; 
+            font-size: 1.5em;
+          }
+            
+         #blok_pytania {
+            float:center;
+            width:90%;
+            background-color:#b1e3bf;
+            font-family: Fira Sans; 
+            font-size: 1.5em;
+          }
 
-      .floatfix {
-        zoom:1; /* dla IE < 8 */
-      }
 
-      .floatfix:after {
-        content:'';
-        display:block;
-        clear:both;
-      }
+         .floatfix {
+           zoom:1; /* dla IE < 8 */
+         }
+
+         .floatfix:after {
+            content:'';
+            display:block;
+            clear:both;
+         }
     </style>
     </head>
 
@@ -238,8 +249,7 @@
                       <img id="i_obraz_6" src="obraz/title.jpg" width="163" height=auto onclick="f_click_obraz_6()">     
                  </div>
                 
-                <div id="blok12">
-           
+                <div id="blok12">           
                         <p Align=justify id="tekst_eduk_1" style="display:none;"> Przeprowadzenie Spisu Rolnego regulują przepisy prawa krajowego „ble ble ble”. Obowiązek realizacji spisów wynika z uregulowań i zaleceń organizacji międzynarodowych (ONZ i UE). Rozporządzenie „ble ble ble” obliguje wszystkie kraje UE do przeprowadzenia spisu rolnego zgodnie z określonymi wymogami aby zachować porównywalność danych z poszczególnych krajów.</p>    
                         <p Align=justify id="tekst_eduk_2" style="display:none;"> Badanie pełne, inaczej badanie całkowite (wyczerpujące). Badanie statystyczne w którym obserwacji podlegają wszystkie elementy zbiorowości generalnej.</p>
                         <p Align=justify id="tekst_eduk_3" style="display:none;"> Gospodarstwa indywidualne o powierzchni 1 ha i więcej użytków rolnych oraz o powierzchni poniżej 1 ha użytków rolnych (w tym nieposiadających użytków rolnych) prowadzących produkcję rolną (roślinną i zwierzęcą) o znaczącej skali, w tym działy specjalne produkcji rolnej. Gospodarstwa rolne osób prawnych i jednostek organizacyjnych niemających osobowości prawnej prowadzących działalność rolniczą (PKD sekcja A).</p>
@@ -252,7 +262,7 @@
            
            
            <br><br> 
-                  <div style="width:980px; height:200px; margin:0 auto; background-color:#b1e3b0; font-family: Fira Sans; font-size: 1.5em; ">  
+                  <div id="blok_pytania">  
                     <fieldset id="pyt1" style="display:none;"> 
                         <legend>Jakie są podstawy prawne Spisu Rolnego ?</legend>
                         <input type="checkbox" name="pyt1"/> Ustawa o statystyce publicznej<br>
