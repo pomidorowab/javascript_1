@@ -9,8 +9,12 @@
             var v_pytanie_6 = false; //brak odpowiedzi na pytanie    
             
             if (v_pytanie_1=true && v_pytanie_2=true && v_pytanie_3=true && v_pytanie_4=true && v_pytanie_5=true && v_pytanie_6=true){
-                document.getElementById('tekst_eduk_gratulacje').style.display = 'block';                   
-            }          
+                document.getElementById('tekst_eduk_x').style.display = 'block';                   
+            } 
+             else { 
+                 document.getElementById('tekst_eduk_x').style.display = 'none';  
+            }
+
 
             function zakryj_pytania(){ // i wiadomości edukacyjne
               document.getElementById('pyt1').style.display = 'none';                  
@@ -26,7 +30,7 @@
               document.getElementById('tekst_eduk_4').style.display = 'none';         
               document.getElementById('tekst_eduk_5').style.display = 'none';         
               document.getElementById('tekst_eduk_6').style.display = 'none';         
-              document.getElementById('tekst_eduk_gratulacje').style.display = 'none';                   
+              document.getElementById('tekst_eduk_x').style.display = 'none';                   
             }
 
             function f_click_obraz_1(){
