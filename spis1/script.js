@@ -8,16 +8,6 @@
             var v_pytanie_5 = false; //brak odpowiedzi na pytanie
             var v_pytanie_6 = false; //brak odpowiedzi na pytanie    
             
-            function gratulacje(){
-               if (v_pytanie_1=true && v_pytanie_2=true && v_pytanie_3=true && v_pytanie_4=true && v_pytanie_5=true && v_pytanie_6=true){
-                   document.getElementById('tekst_eduk_x').style.display = 'block';                   
-               } 
-               else { 
-                   document.getElementById('tekst_eduk_x').style.display = 'none';  
-               }            
-            }
-
-
             function zakryj_pytania(){ // i wiadomości edukacyjne
               document.getElementById('pyt1').style.display = 'none';                  
               document.getElementById('pyt2').style.display = 'none';                  
@@ -32,7 +22,7 @@
               document.getElementById('tekst_eduk_4').style.display = 'none';         
               document.getElementById('tekst_eduk_5').style.display = 'none';         
               document.getElementById('tekst_eduk_6').style.display = 'none';         
-              document.getElementById('tekst_eduk_x').style.display = 'none';                   
+                 
             }
 
             function f_click_obraz_1(){
@@ -117,7 +107,7 @@
                     document.getElementById('pyt1').style.display = 'none';//zakrycie pytania
                     document.getElementById('tekst_eduk_0').style.display = 'none';         
                     document.getElementById('tekst_eduk_1').style.display = 'block'; 
-                    gratulacje();                
+            
                 }                 
                   else {
                       alert("Nieprawidłowa odpowiedź lub niewpełni prawidłowa odpowiedź");
@@ -134,7 +124,7 @@
                     document.getElementById('pyt2').style.display = 'none';//zakrycie pytania
                     document.getElementById('tekst_eduk_0').style.display = 'none';         
                     document.getElementById('tekst_eduk_2').style.display = 'block'; 
-                    gratulacje();                
+              
                 }                 
                   else {
                       alert("Nieprawidłowa odpowiedź");
@@ -151,7 +141,7 @@
                     document.getElementById('pyt3').style.display = 'none';//zakrycie pytania
                     document.getElementById('tekst_eduk_0').style.display = 'none';         
                     document.getElementById('tekst_eduk_3').style.display = 'block'; 
-                    gratulacje();                
+              
                 }                 
                   else {
                       alert("Nieprawidłowa odpowiedź lub niewpełni prawidłowa odpowiedź");
@@ -168,7 +158,7 @@
                     document.getElementById('pyt4').style.display = 'none';//zakrycie pytania
                     document.getElementById('tekst_eduk_0').style.display = 'none';         
                     document.getElementById('tekst_eduk_4').style.display = 'block'; 
-                    gratulacje();                
+             
                 }                 
                    else {
                       alert("Nieprawidłowa odpowiedź");
@@ -185,7 +175,7 @@
                     document.getElementById('pyt5').style.display = 'none';//zakrycie pytania
                     document.getElementById('tekst_eduk_0').style.display = 'none'; 
                     document.getElementById('tekst_eduk_5').style.display = 'block'; 
-                    gratulacje();                
+              
                 }                 
                   else {
                       alert("Nieprawidłowa odpowiedź");
@@ -202,7 +192,7 @@
                     document.getElementById('pyt6').style.display = 'none';//zakrycie pytania
                     document.getElementById('tekst_eduk_0').style.display = 'none';         
                     document.getElementById('tekst_eduk_6').style.display = 'block'; 
-                    gratulacje();                
+          
                 }                 
                   else {
                       alert("Nieprawidłowa odpowiedź");
