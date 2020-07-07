@@ -1,5 +1,6 @@
-<html>
+<html>    
     <head>
+        <title>tyt</tiltle>        
         <script>
             var t_obraz = 'obraz/title.jpg'
             var t_obrazy = ['obraz/title.jpg','obraz/title_1.jpg','obraz/title_2.jpg','obraz/title_3.jpg','obraz/title_4.jpg','obraz/title_5.jpg','obraz/title_6.jpg'];     
@@ -191,6 +192,36 @@
                   }
             }
         </script>
+        
+        <style>
+        #blok1 {
+        background-color:black;
+        border:3px dashed red;
+        font-size:1.4em;
+      }
+
+      #blok1_1 {
+        float:left;
+        width:70%;
+        background-color:lightblue;
+      }
+
+      #blok12 {
+        float:left;
+        width:30%;
+        background-color:lightgreen;
+      }
+
+      .floatfix {
+        zoom:1; /* dla IE < 8 */
+      }
+
+      .floatfix:after {
+        content:'';
+        display:block;
+        clear:both;
+      }
+    </style>
     </head>
 
     
@@ -198,6 +229,12 @@
        <div style="width:1100px; height:800px; margin:0 auto;background-color:#b1e3bf;">
            <img src="obraz/plakat.jpg" width="1100" height=auto>
            <br><br>  ala ala
+           
+           
+            <div id="blok1" class="floatfix">
+                <div id="blok11">div - blok11</div>
+                <div id="blok12">div - blok12</div>
+            </div>
            
            
        </div>    
