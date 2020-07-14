@@ -18,10 +18,7 @@
 
               document.getElementById('tekst_eduk_1').style.display = 'none';  
               document.getElementById('tekst_eduk_2').style.display = 'none';         
-              document.getElementById('tekst_eduk_3').style.display = 'none';         
-              document.getElementById('tekst_eduk_4').style.display = 'none';         
-              document.getElementById('tekst_eduk_5').style.display = 'none';         
-              document.getElementById('tekst_eduk_6').style.display = 'none';         
+       
             }
 
             function f_click_obraz_1(){
