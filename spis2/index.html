@@ -1,28 +1,171 @@
-<html>            
-    <head>
-        <script type="text/javascript" src="script.js"></script>
-    </head>
-    <body style="background-color:#C5EBD0;">
-      <div style="width:1100px; height:780px; margin:0 auto;background-color:#b1e3bf;">
-          <img src="obraz/plakat.jpg" width="1100" height=auto>
-          <br><br>
-          <img id="i_obraz_1" src="obraz/title.jpg" width="163" height=auto onclick="f_click_obraz_1()"> 
-          <img id="i_obraz_2" src="obraz/title.jpg" width="163" height=auto onclick="f_click_obraz_2()"> 
-          <img id="i_obraz_3" src="obraz/title.jpg" width="163" height=auto onclick="f_click_obraz_3()"> 
+<html>    
 
-          <br><br>
-          
-          
-          <div id="blok1" class="floatfix">              
-            <div id="blok11" style="background-color:red;">aaa </div> 
-            <div id="blok12" style="background-color:blue;"><div id="blok121">bbb </div></div>              
-          </div>   
-       
-          
-       </div>   
-     
-          
-          
-          
+    <head>
+
+        <script type="text/javascript" src="script.js"></script>
+
+        <link rel="stylesheet" href="style.css" type="text/css" />
+
+    </head>
+
+
+
+    
+
+    <body style="background-color:#C5EBD0;">
+
+       <div style="width:1100px; height:800px; margin:0 auto;background-color:#b1e3bf;">
+
+           <img src="obraz/plakat.jpg" width="1100" height=auto><br><br>
+
+                 
+
+           
+
+            <div id="blok1" class="floatfix">
+
+                 <div id="blok11">
+
+                      <img id="i_obraz_1" src="obraz/title.jpg" width="163" height=auto onclick="f_click_obraz_1()"> 
+
+                      <img id="i_obraz_2" src="obraz/title.jpg" width="163" height=auto onclick="f_click_obraz_2()"> 
+
+                      <img id="i_obraz_3" src="obraz/title.jpg" width="163" height=auto onclick="f_click_obraz_3()"> 
+
+                      <img id="i_obraz_4" src="obraz/title.jpg" width="163" height=auto onclick="f_click_obraz_4()"> 
+
+                      <img id="i_obraz_5" src="obraz/title.jpg" width="163" height=auto onclick="f_click_obraz_5()"> 
+
+                      <img id="i_obraz_6" src="obraz/title.jpg" width="163" height=auto onclick="f_click_obraz_6()">     
+
+                 </div>
+
+                
+
+                <div id="blok12"> <div id="blok121">          
+
+                        <p Align=justify id="tekst_eduk_0" style="display:block;"> Treść tekstu zachęcającego i wprowadzającego do gry: ble ble ble</p>    
+
+                        <p Align=justify id="tekst_eduk_1" style="display:none;"> Przeprowadzenie Spisu Rolnego regulują przepisy prawa krajowego „ble ble ble”. Obowiązek realizacji spisów wynika z uregulowań i zaleceń organizacji międzynarodowych (ONZ i UE). Rozporządzenie „ble ble ble” obliguje wszystkie kraje UE do przeprowadzenia spisu rolnego zgodnie z określonymi wymogami aby zachować porównywalność danych z poszczególnych krajów.</p>    
+
+                        <p Align=justify id="tekst_eduk_2" style="display:none;"> Badanie pełne, inaczej badanie całkowite (wyczerpujące). Badanie statystyczne w którym obserwacji podlegają wszystkie elementy zbiorowości generalnej.</p>
+
+                        <p Align=justify id="tekst_eduk_3" style="display:none;"> Gospodarstwa indywidualne o powierzchni 1 ha i więcej użytków rolnych oraz o powierzchni poniżej 1 ha użytków rolnych (w tym nieposiadających użytków rolnych) prowadzących produkcję rolną (roślinną i zwierzęcą) o znaczącej skali, w tym działy specjalne produkcji rolnej. Gospodarstwa rolne osób prawnych i jednostek organizacyjnych niemających osobowości prawnej prowadzących działalność rolniczą (PKD sekcja A).</p>
+
+                        <p Align=justify id="tekst_eduk_4" style="display:none;"> </p>    
+
+                        <p Align=justify id="tekst_eduk_5" style="display:none;"> Spis rolny przeprowadza się na terenie Rzeczypospolitej Polskiej w terminie od 1 września do 30 listopada 2020 r., według stanu na dzień  1 czerwca 2020 r. (dzień referencyjny). Oznacza to, że nie wykazujemy np. zwierząt gospodarskich urodzonych po tej dacie czy sprzętu rolniczego zakupionego po tym terminie.</p>
+
+                        <p Align=justify id="tekst_eduk_6" style="display:none;"> Podmioty objęte spisem mają obowiązek udzielania dokładnych, wyczerpujących i zgodnych z prawdą odpowiedzi, co wynika z art. 7 ust. 2 ustawy o PSR 2020. Użytkownik gospodarstwa rolnego, który nie dokonał samospisu internetowego, nie może odmówić przekazania danych w formie wywiadu telefonicznego lub bezpośredniego.</p>    
+
+      
+
+                      </div>
+
+                </div>
+
+            </div>           
+
+           
+
+           <br><br> 
+
+                  <div id="blok_pytania">  
+
+                    <fieldset id="pyt1" style="display:none;"> 
+
+                        <legend>Jakie są podstawy prawne Spisu Rolnego ?</legend>
+
+                        <input type="checkbox" name="pyt1"/> Ustawa o statystyce publicznej<br>
+
+                        <input type="checkbox" name="pyt1"/> Ustawa o powszechnym spisie rolnym<br>      
+
+                        <input type="checkbox" name="pyt1"/> Rozporządzenia Parlamentu Europejskiego i Rady (UE) w sprawie zintegrowanych statystyk dotyczących gospodarstw rolnych<br><br>      
+
+                        <center><input type="submit" value="Zatwierdź" onclick="return spr_odp_1();"></center>
+
+                    </fieldset>   
+
+             
+
+                    <fieldset id="pyt2" style="display:none;"> 
+
+                        <legend>Czy Spis Rolny jest badaniem pełnym ?</legend>
+
+                        <input type="radio" name="pyt2"/> Tak<br>
+
+                        <input type="radio" name="pyt2"/> Nie<br><br>                
+
+                        <center><input type="submit" value=" Zatwierdź" onclick="return spr_odp_2();"></center>
+
+                    </fieldset>  
+
+
+
+                    <fieldset id="pyt3" style="display:none;"> 
+
+                        <legend>Kogo obejmuje Spis Rolny?</legend>
+
+                        <input type="checkbox" name="pyt3"/> Gospodarstwa osób fizycznych (gospodarstwa indywidualne)<br>
+
+                        <input type="checkbox" name="pyt3"/> Gospodarstwa osób prawnych<br>      
+
+                        <input type="checkbox" name="pyt3"/> Gospodarstwa jednostek organizacyjnych niemających osobowości prawnej<br><br>      
+
+                        <center><input type="submit" value=" Zatwierdź" onclick="return spr_odp_3();"></center>
+
+                    </fieldset> 
+
+            
+
+                    <fieldset id="pyt4" style="display:none;"> 
+
+                        <legend>W jakim terminie przeprowadzany jest PSR 2020 ?</legend>
+
+                        <input type="radio" name="pyt4"/> Od 1 września do 30 września 2020 r.<br>
+
+                        <input type="radio" name="pyt4"/> Od 1 września do 30 listopada 2020 r.<br>                
+
+                        <input type="radio" name="pyt4"/> Od 1 września do 31 grudnia 2020 r.<br><br>                
+
+                        <center><input type="submit" value=" Zatwierdź" onclick="return spr_odp_4();"></center>
+
+                    </fieldset>  
+
+
+
+                    <fieldset id="pyt5" style="display:none;"> 
+
+                        <legend>Według jakiego stanu przeprowadza się Spis Rolny ?</legend>
+
+                        <input type="radio" name="pyt5"/> Wg stanu w dniu 1 czerwca 2020 r.<br>
+
+                        <input type="radio" name="pyt5"/> Wg stanu w dniu 1 września 2020 r.<br>                
+
+                        <input type="radio" name="pyt5"/> Wg stanu w dniu, w którym dokonuje się spisu<br><br>                
+
+                        <center><input type="submit" value=" Zatwierdź" onclick="return spr_odp_5();"></center>
+
+                    </fieldset>  
+
+           
+
+                    <fieldset id="pyt6" style="display:none;"> 
+
+                        <legend>Czy udział w spisie rolnym jest obowiązkowy ?</legend>
+
+                        <input type="radio" name="pyt6"/> Tak<br>
+
+                        <input type="radio" name="pyt6"/> Nie<br><br>                
+
+                        <center><input type="submit" value=" Zatwierdź" onclick="return spr_odp_6();"></center>
+
+                    </fieldset> 
+
+                 </div>     
+
+       </div>    
+
     </body>
+
 </html>  
