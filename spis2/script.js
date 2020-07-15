@@ -1,5 +1,5 @@
             var t_obraz = 'obraz/title.jpg'            
-            var t_obrazy = ['obraz/title.jpg','obraz/title_1.jpg','obraz/title_2.jpg','obraz/title_3.jpg','obraz/title_4.jpg','obraz/title_5.jpg','obraz/title_6.jpg','obraz/title_7.jpg','obraz/title_8.jpg'];     
+            var t_obrazy = ['obraz/title.jpg','obraz/title_1.png','obraz/title_2.png','obraz/title_3.png','obraz/title_4.png','obraz/title_5.png','obraz/title_6.png','obraz/title_7.png','obraz/title_8.png'];     
 
             var v_pytanie_1 = false; //brak odpowiedzi na pytanie
             var v_pytanie_2 = false; //brak odpowiedzi na pytanie
