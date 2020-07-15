@@ -1,4 +1,4 @@
-            var t_obraz = 'obraz/title.jpg'            
+            var t_obraz = 'obraz/title.jpg'                        
             var t_obrazy = ['obraz/title.jpg','obraz/title_1.png','obraz/title_2.png','obraz/title_3.png','obraz/title_4.png','obraz/title_5.png','obraz/title_6.png','obraz/title_7.png','obraz/title_8.png'];     
 
             var v_pytanie_1 = false; //brak odpowiedzi na pytanie
@@ -6,7 +6,10 @@
             var v_pytanie_3 = false; //brak odpowiedzi na pytanie
             var v_pytanie_4 = false; //brak odpowiedzi na pytanie
             var v_pytanie_5 = false; //brak odpowiedzi na pytanie
-            var v_pytanie_6 = false; //brak odpowiedzi na pytanie            
+            var v_pytanie_6 = false; //brak odpowiedzi na pytanie     
+            var v_pytanie_7 = false; //brak odpowiedzi na pytanie     
+            var v_pytanie_8 = false; //brak odpowiedzi na pytanie     
+
 
             function zakryj_pytania(){ // i wiadomości edukacyjne
               document.getElementById('pyt1').style.display = 'none';                  
@@ -15,6 +18,8 @@
               document.getElementById('pyt4').style.display = 'none';                  
               document.getElementById('pyt5').style.display = 'none';                  
               document.getElementById('pyt6').style.display = 'none'; 
+              document.getElementById('pyt7').style.display = 'none'; 
+              document.getElementById('pyt8').style.display = 'none'; 
             }
             
             function zakryj_tekst_eduk(){ // i wiadomości edukacyjne
@@ -25,6 +30,8 @@
               document.getElementById('tekst_eduk_4').style.display = 'none';         
               document.getElementById('tekst_eduk_5').style.display = 'none';         
               document.getElementById('tekst_eduk_6').style.display = 'none';                
+              document.getElementById('tekst_eduk_7').style.display = 'none';                
+              document.getElementById('tekst_eduk_8').style.display = 'none';                
             }
 
             function f_click_obraz_1(){
@@ -103,6 +110,32 @@
                  document.getElementById('pyt6').style.display = 'block';       
                   }
              }
+
+            function f_click_obraz_7(){
+              zakryj_pytania()
+              if (v_pytanie_7){
+                  document.getElementById('i_obraz_7').src = t_obraz; // zakrycie obrazka  
+                  document.getElementById('pyt7').style.display = 'none';//zakrycie pytania                  
+                  v_pytanie_7 = false;  // zmiana na brak odpowiedzi lub odpowiedź nieprawidłowa   
+               }
+             else { 
+                 document.getElementById('pyt7').style.display = 'block';       
+                  }
+             }
+
+            function f_click_obraz_8(){
+              zakryj_pytania()
+              if (v_pytanie_8){
+                  document.getElementById('i_obraz_8').src = t_obraz; // zakrycie obrazka  
+                  document.getElementById('pyt8').style.display = 'none';//zakrycie pytania                  
+                  v_pytanie_8 = false;  // zmiana na brak odpowiedzi lub odpowiedź nieprawidłowa   
+               }
+             else { 
+                 document.getElementById('pyt8').style.display = 'block';       
+                  }
+             }
+
+
 
             function spr_odp_1(){
                 var pytanie = document.getElementsByName("pyt1");                
@@ -199,3 +232,36 @@
                       document.getElementById('pyt6').style.display = 'none';//zakrycie pytania
                   }
             }
+
+            function spr_odp_7(){
+                var pytanie = document.getElementsByName("pyt7");                
+                if (pytanie[0].checked == true && pytanie[1].checked == true && pytanie[2].checked == true) {
+                    alert("Odpowiedź w pełni prawidłowa");
+                    v_pytanie_7 = true;  // odpowiedź prawidłowa    
+                    document.getElementById('i_obraz_7').src = t_obrazy[7]; // odkrycie obrazka
+                    document.getElementById('pyt7').style.display = 'none';//zakrycie pytania
+                    zakryj_tekst_eduk()         
+                    document.getElementById('tekst_eduk_7').style.display = 'block'; 
+                }                 
+                  else {
+                      alert("Nieprawidłowa odpowiedź lub niewpełni prawidłowa odpowiedź");
+                      document.getElementById('pyt7').style.display = 'none';//zakrycie pytania
+                  }
+            }
+
+            function spr_odp_8(){
+                var pytanie = document.getElementsByName("pyt8");                
+                if (pytanie[0].checked == true && pytanie[1].checked == true && pytanie[2].checked == true) {
+                    alert("Odpowiedź w pełni prawidłowa");
+                    v_pytanie_8 = true;  // odpowiedź prawidłowa    
+                    document.getElementById('i_obraz_8').src = t_obrazy[8]; // odkrycie obrazka
+                    document.getElementById('pyt8').style.display = 'none';//zakrycie pytania
+                    zakryj_tekst_eduk()         
+                    document.getElementById('tekst_eduk_8').style.display = 'block'; 
+                }                 
+                  else {
+                      alert("Nieprawidłowa odpowiedź lub niewpełni prawidłowa odpowiedź");
+                      document.getElementById('pyt8').style.display = 'none';//zakrycie pytania
+                  }
+            }
+
