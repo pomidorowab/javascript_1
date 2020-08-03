@@ -82,7 +82,7 @@ const memoryGame = {
         this.divScore = document.querySelector(".game-score");
 	this.divScore.innerText = "";
 	    
-        this.divScoret = document.querySelector(".game-score");
+        this.divScoret = document.querySelector(".game-scoret");
 	this.divScoret.innerText = "";
 
 
