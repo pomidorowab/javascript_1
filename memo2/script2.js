@@ -52,7 +52,7 @@ const memoryGame = {
         var plain = CryptoJS.AES.decrypt(psr, 'CryptoJS.pad.Pkcs7', "{ mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 }");
         //this.tilesChecked[0].remove(); zniknięcie odkrytej pary klocków
         //this.tilesChecked[1].remove();
-	this.divScoret.innerText = 'aaaaaaaa';
+	this.divScoret.innerText = "aaaaaaaa";
 	
 
         this.canGet = true;
@@ -80,7 +80,11 @@ const memoryGame = {
 
         //czyścimy planszę z ruchami
         this.divScore = document.querySelector(".game-score");
-        this.divScore.innerText = "";
+	this.divScore.innerText = "";
+	    
+        this.divScoret = document.querySelector(".game-score");
+	this.divScoret.innerText = "";
+
 
         //czyścimy zmienne (bo gra może się zacząć ponownie)
         this.tiles = [];
