@@ -42,7 +42,7 @@ const memoryGame = {
                 this.moveCount++;
 		        this.dataczas= new Date();
                 this.divScore.innerText = this.moveCount;
-                this.divScore.innerText = 'aLiczba odsłon: ' + this.divScore.innerText +', data: '+ this.dataczas.toLocaleDateString() +', godzina: '+ this.dataczas.getHours() +':'+ this.dataczas.getMinutes() +':'+ this.dataczas.getSeconds();
+                this.divScore.innerText = 'Liczba odsłon: ' + this.divScore.innerText +', data: '+ this.dataczas.toLocaleDateString() +', godzina: '+ this.dataczas.getHours() +':'+ this.dataczas.getMinutes() +':'+ this.dataczas.getSeconds();
             }
         }
     },
@@ -89,8 +89,7 @@ const memoryGame = {
         this.tilesChecked = [];
 
         this.tilePairs++;
-        if (this.tilePairs >= this.tileCount / 2) {
-	    this.divScoret.innerText = "Pytanie:";
+        if (this.tilePairs >= this.tileCount / 2) {	    
             document.getElementById('pass_p').innerHTML = plain.toString(CryptoJS.enc.Utf8);
         }
     },
