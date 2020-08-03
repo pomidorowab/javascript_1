@@ -42,7 +42,7 @@ const memoryGame = {
                 this.moveCount++;
 		        this.dataczas= new Date();
                 this.divScore.innerText = this.moveCount;
-                this.divScore.innerText = 'lLiczba odsłon: ' + this.divScore.innerText +', data: '+ this.dataczas.toLocaleDateString() +', godzina: '+ this.dataczas.getHours() +':'+ this.dataczas.getMinutes() +':'+ this.dataczas.getSeconds();
+                this.divScore.innerText = 'Liczba odsłon: ' + this.divScore.innerText +', data: '+ this.dataczas.toLocaleDateString() +', godzina: '+ this.dataczas.getHours() +':'+ this.dataczas.getMinutes() +':'+ this.dataczas.getSeconds();
             }
         }
     },
@@ -58,9 +58,34 @@ const memoryGame = {
 	// } else {};
 	    
         switch (this.tilesChecked[1].style.backgroundImage.substr(12,7)) {
-		case 'title_1':
-                      this.divScoret.innerText = "W Polsce jest ponad 19 tys. ekologicznych gospodarstw rolnych, z czego najwięcej jest w województwie warmińsko-mazurskim (18%). Ponad połowa (blisko 56%) wszystkich gospodarstw ekologicznych znajdowała się w 4 województwach: warmińsko-mazurskim (17,7% ogółu gospodarstw ekologicznych), podlaskim (15,6%), mazowieckim (11,9%) i zachodniopomorskim (10,7%). Dane za rok 2018.";
-   		      break;
+		case 'title_1': 
+			this.divScoret.innerText = "W Polsce jest ponad 19 tys. ekologicznych gospodarstw rolnych, z czego najwięcej jest w województwie warmińsko-mazurskim (18%). Ponad połowa (blisko 56%) wszystkich gospodarstw ekologicznych znajdowała się w 4 województwach: warmińsko-mazurskim (17,7% ogółu gospodarstw ekologicznych), podlaskim (15,6%), mazowieckim (11,9%) i zachodniopomorskim (10,7%). Dane za rok 2018.";
+			break;
+   	        case 'title_2': 
+			this.divScoret.innerText = "Jabłka to najczęściej uprawiane owoce w Polsce. W woj. opolskim stanowią ponad 50% powierzchni wszystkich drzew owocowych.";
+			break;
+   	        case 'title_3': 
+			this.divScoret.innerText = "Najchętniej uprawianym warzywem gruntowym w woj. opolskim jest kapusta.";
+			break;			
+   	        case 'title_4': 
+			this.divScoret.innerText = "W 2019 r. najwięcej mleka krowiego skupiono w woj. podlaskim (22% całego skupu).";
+			break;			
+   	        case 'title_5': 
+			this.divScoret.innerText = "W 2019 r. przeciętna roczna liczba jaj od 1 kury nioski wyniosła 220 szt.";
+			break;
+   	        case 'title_6': 
+			this.divScoret.innerText = "Najwięcej drobiu kurzego hoduje się w województwie wielkopolskim – ponad 40 mln. sztuk tj. prawie 1\4 ogółu drobiu kurzego.";
+			break;
+   	        case 'title_7': 
+			this.divScoret.innerText = "Najwięcej owiec hodowanych jest w województwie małopolskim (30% wszystkich owiec).";
+			break;
+   	        case 'title_8': 
+			this.divScoret.innerText = "W 2019 r. największe plony zbóż z 1 ha odnotowano w województwie opolskim (o 40% więcej niż średnia krajowa).";
+			break;
+   	        case 'title_9': 
+			this.divScoret.innerText = "W 2019 r. największe zbiory ziemniaków w województwie mazowieckim (13% wszystkich zbiorów).";
+			break;	
+		default: this.divScoret.innerText = "";	
 	}
 	    
 	    
