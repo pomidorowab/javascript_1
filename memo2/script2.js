@@ -42,7 +42,7 @@ const memoryGame = {
                 this.moveCount++;
 		        this.dataczas= new Date();
                 this.divScore.innerText = this.moveCount;
-                this.divScore.innerText = 'iLiczba odsłon: ' + this.divScore.innerText +', data: '+ this.dataczas.toLocaleDateString() +', godzina: '+ this.dataczas.getHours() +':'+ this.dataczas.getMinutes() +':'+ this.dataczas.getSeconds();
+                this.divScore.innerText = 'kLiczba odsłon: ' + this.divScore.innerText +', data: '+ this.dataczas.toLocaleDateString() +', godzina: '+ this.dataczas.getHours() +':'+ this.dataczas.getMinutes() +':'+ this.dataczas.getSeconds();
             }
         }
     },
@@ -52,12 +52,15 @@ const memoryGame = {
         var plain = CryptoJS.AES.decrypt(psr, 'CryptoJS.pad.Pkcs7', "{ mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 }");
         //this.tilesChecked[0].remove(); zniknięcie odkrytej pary klocków
         //this.tilesChecked[1].remove();
-	 this.divScoret.innerText = this.tilesChecked[1].style.backgroundImage.substr(13,6);
+	 
+	    
+	//this.divScoret.innerText = this.tilesChecked[1].style.backgroundImage.substr(12,7);
 	    
 	 
-	 if (this.tilesChecked[1].style.backgroundImage === 'url("images/title_1.png")'){
+	 if (this.tilesChecked[1].style.backgroundImage.substr(12,7) === 'title_1'){
 	   this.divScoret.innerText = "W Polsce jest ponad 19 tys. ekologicznych gospodarstw rolnych, z czego najwięcej jest w województwie warmińsko-mazurskim (18%). Ponad połowa (blisko 56%) wszystkich gospodarstw ekologicznych znajdowała się w 4 województwach: warmińsko-mazurskim (17,7% ogółu gospodarstw ekologicznych), podlaskim (15,6%), mazowieckim (11,9%) i zachodniopomorskim (10,7%). Dane za rok 2018.";
-	 }
+	 } else {}
+	    
 	    
 	//this.divScoret.innerText = "W Polsce jest ponad 19 tys. ekologicznych gospodarstw rolnych, z czego najwięcej jest w województwie warmińsko-mazurskim (18%). Ponad połowa (blisko 56%) wszystkich gospodarstw ekologicznych znajdowała się w 4 województwach: warmińsko-mazurskim (17,7% ogółu gospodarstw ekologicznych), podlaskim (15,6%), mazowieckim (11,9%) i zachodniopomorskim (10,7%). Dane za rok 2018.";
 	
