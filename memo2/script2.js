@@ -106,8 +106,8 @@ const memoryGame = {
 
             tile.dataset.cardType = this.tiles[i];
             tile.dataset.index = i;
-            tile.style.left = 6+(tile.offsetWidth+10)*(i%this.tileOnRow) + "px";
-            tile.style.top = 6+(tile.offsetHeight+10)*(Math.floor(i/this.tileOnRow)) + "px";
+            tile.style.left = 5+(tile.offsetWidth+10)*(i%this.tileOnRow) + "px";
+            tile.style.top = 5+(tile.offsetHeight+10)*(Math.floor(i/this.tileOnRow)) + "px";
 
             tile.addEventListener("click", this.tileClick.bind(this));
         }
