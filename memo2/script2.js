@@ -7,6 +7,7 @@ const memoryGame = {
     tiles : [], //tutaj trafi wymieszana tablica klocków
     tilesChecked : [], //zaznaczone klocki
     moveCount : 0, //liczba ruchów
+    dataczasstart : 0, // data i czas startu
     dataczas : 0, //data i czas
     tilesImg : [ //grafiki dla klocków
         "images/title_1.png",
@@ -40,10 +41,13 @@ const memoryGame = {
                     setTimeout(this.resetTiles.bind(this), 500);
                 }
                 this.moveCount++;
-		        this.dataczas= new Date();
+		this.dataczas= new Date();
                 this.divScore.innerText = this.moveCount;
-                this.divScore.innerText = 'Liczba odsłon: ' + this.divScore.innerText +', data: '+ this.dataczas.toLocaleDateString() +', godzina: '+ this.dataczas.getHours() +':'+ this.dataczas.getMinutes() +':'+ this.dataczas.getSeconds();
-            }
+                this.divScore.innerText = 'Liczba odsłon: ' + this.divScore.innerText +', data: '+ this.dataczas.toLocaleDateString() + 
+			', godzina START: '+ this.dataczasstart.getHours() +':'+ this.dataczasstart.getMinutes() +':'+ this.dataczasstart.getSeconds() +
+			', godzina STOP: '+ this.dataczas.getHours() +':'+ this.dataczas.getMinutes() +':'+ this.dataczas.getSeconds() +
+			', czas: ' + this.dataczas-this.dataczasstart;
+	    }
         }
     },
 
@@ -103,6 +107,7 @@ const memoryGame = {
     },
 
     startGame() {
+	this.dataczasstart = new Date();
         //czyścimy planszę
         document.getElementById('pass_p').innerHTML=""
         this.divBoard = document.querySelector(".game-board");
