@@ -49,8 +49,9 @@ const memoryGame = {
     deleteTiles() {
         var psr = 'U2FsdGVkX18OcQrJnPGtLf6DHVjhOecuKXms5G9MJUBR2AYq52iZZ8TodLGW9DgB';
         var plain = CryptoJS.AES.decrypt(psr, 'CryptoJS.pad.Pkcs7', "{ mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 }");
-        //this.tilesChecked[0].remove();
+        //this.tilesChecked[0].remove(); zniknięcie odkrytej pary klocków
         //this.tilesChecked[1].remove();
+	
 
         this.canGet = true;
         this.tilesChecked = [];
