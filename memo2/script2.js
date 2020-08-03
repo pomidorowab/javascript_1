@@ -16,8 +16,7 @@ const memoryGame = {
         "images/title_6.png",
         "images/title_7.png",
         "images/title_8.png",
-        "images/title_9.png",
-        "images/title_10.png"
+        "images/title_9.png"
     ],
     canGet : true, //czy można klikać na kafelki
     tilePairs : 0, //liczba dopasowanych kafelkow
