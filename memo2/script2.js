@@ -53,10 +53,7 @@ const memoryGame = {
         //this.tilesChecked[0].remove(); zniknięcie odkrytej pary klocków
         //this.tilesChecked[1].remove();   
 	 
-	// if (this.tilesChecked[1].style.backgroundImage.substr(12,7) === 'title_1'){
-	//   this.divScoret.innerText = "W Polsce jest ponad 19 tys. ekologicznych gospodarstw rolnych, z czego najwięcej jest w województwie warmińsko-mazurskim (18%). Ponad połowa (blisko 56%) wszystkich gospodarstw ekologicznych znajdowała się w 4 województwach: warmińsko-mazurskim (17,7% ogółu gospodarstw ekologicznych), podlaskim (15,6%), mazowieckim (11,9%) i zachodniopomorskim (10,7%). Dane za rok 2018.";
-	// } else {};
-	    
+        //dodatkowe informacje     
         switch (this.tilesChecked[1].style.backgroundImage.substr(12,7)) {
 		case 'title_1': 
 			this.divScoret.innerText = "W Polsce jest ponad 19 tys. ekologicznych gospodarstw rolnych, z czego najwięcej jest w województwie warmińsko-mazurskim (18%). Ponad połowa (blisko 56%) wszystkich gospodarstw ekologicznych znajdowała się w 4 województwach: warmińsko-mazurskim (17,7% ogółu gospodarstw ekologicznych), podlaskim (15,6%), mazowieckim (11,9%) i zachodniopomorskim (10,7%). Dane za rok 2018.";
@@ -74,7 +71,7 @@ const memoryGame = {
 			this.divScoret.innerText = "W 2019 r. przeciętna roczna liczba jaj od 1 kury nioski wyniosła 220 szt.";
 			break;
    	        case 'title_6': 
-			this.divScoret.innerText = "Najwięcej drobiu kurzego hoduje się w województwie wielkopolskim – ponad 40 mln. sztuk tj. prawie 1\4 ogółu drobiu kurzego.";
+			this.divScoret.innerText = "Najwięcej drobiu kurzego hoduje się w województwie wielkopolskim – ponad 40 mln. sztuk tj. prawie 1/4 ogółu drobiu kurzego.";
 			break;
    	        case 'title_7': 
 			this.divScoret.innerText = "Najwięcej owiec hodowanych jest w województwie małopolskim (30% wszystkich owiec).";
@@ -87,10 +84,6 @@ const memoryGame = {
 			break;	
 		default: this.divScoret.innerText = "";	
 	}
-	    
-	    
-	
-	
 
         this.canGet = true;
         this.tilesChecked = [];
