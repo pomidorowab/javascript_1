@@ -45,8 +45,8 @@ const memoryGame = {
 		this.dataczas= new Date();
 		this.czas = this.dataczasstart-this.dataczas;    
                 this.divScore.innerText = this.moveCount;
-                this.divScore.innerText = 'Liczba odsłon: ' + this.divScore.innerText +', data: '+ this.dataczas.toLocaleDateString() + ', godzina start: '+ this.dataczasstart.getHours() +':'+ this.dataczasstart.getMinutes() +':'+ this.dataczasstart.getSeconds() + ', godzina stop: '+ this.dataczas.getHours() +':'+ this.dataczas.getMinutes() +':'+ this.dataczas.getSeconds()+ 'czas: ' + this.czas;
-		    
+                this.divScore.innerText = 'Liczba odsłon: ' + this.divScore.innerText +', data: '+ this.dataczas.toLocaleDateString() + ', godzina start: '+ this.dataczasstart.getHours() +':'+ this.dataczasstart.getMinutes() +':'+ this.dataczasstart.getSeconds() + ', godzina stop: '+ this.dataczas.getHours() +':'+ this.dataczas.getMinutes() +':'+ this.dataczas.getSeconds();
+ 
 	    }
         }
     },
