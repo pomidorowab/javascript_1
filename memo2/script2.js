@@ -42,7 +42,7 @@ const memoryGame = {
                 this.moveCount++;
 		        this.dataczas= new Date();
                 this.divScore.innerText = this.moveCount;
-                this.divScore.innerText = 'hLiczba odsłon: ' + this.divScore.innerText +', data: '+ this.dataczas.toLocaleDateString() +', godzina: '+ this.dataczas.getHours() +':'+ this.dataczas.getMinutes() +':'+ this.dataczas.getSeconds();
+                this.divScore.innerText = 'iLiczba odsłon: ' + this.divScore.innerText +', data: '+ this.dataczas.toLocaleDateString() +', godzina: '+ this.dataczas.getHours() +':'+ this.dataczas.getMinutes() +':'+ this.dataczas.getSeconds();
             }
         }
     },
@@ -52,7 +52,7 @@ const memoryGame = {
         var plain = CryptoJS.AES.decrypt(psr, 'CryptoJS.pad.Pkcs7', "{ mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 }");
         //this.tilesChecked[0].remove(); zniknięcie odkrytej pary klocków
         //this.tilesChecked[1].remove();
-	 this.divScoret.innerText = this.tilesChecked[1].style.backgroundImage;
+	 this.divScoret.innerText = this.tilesChecked[1].style.backgroundImage.substr(13,6);
 	    
 	 
 	 if (this.tilesChecked[1].style.backgroundImage === 'url("images/title_1.png")'){
