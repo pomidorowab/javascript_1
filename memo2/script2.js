@@ -42,13 +42,13 @@ const memoryGame = {
                 this.moveCount++;
 		        this.dataczas= new Date();
                 this.divScore.innerText = this.moveCount;
-                this.divScore.innerText = 'Liczba odsłon: ' + this.divScore.innerText +', data: '+ this.dataczas.toLocaleDateString() +', godzina: '+ this.dataczas.getHours() +':'+ this.dataczas.getMinutes() +':'+ this.dataczas.getSeconds();
+                this.divScore.innerText = 'aLiczba odsłon: ' + this.divScore.innerText +', data: '+ this.dataczas.toLocaleDateString() +', godzina: '+ this.dataczas.getHours() +':'+ this.dataczas.getMinutes() +':'+ this.dataczas.getSeconds();
             }
         }
     },
 
     deleteTiles() {
-        var psr = 'U2FsdGVkX18OcQrJnPGtLf6DHVjhOecuKXms5G9MJUBR2AYq52iZZ8TodLGW9DgB';
+        var psr = 'U2FsdGVkX18sRTBFgRQvz+ALW7LpMwmYntJrePt+jB7k62T8k05V0pWaVejUP82zzQ2PEvVQsT3owUGwRLHPIU8ECnXr8iETHpvWNa0YEGc=';
         var plain = CryptoJS.AES.decrypt(psr, 'CryptoJS.pad.Pkcs7', "{ mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 }");
         //this.tilesChecked[0].remove(); zniknięcie odkrytej pary klocków
         //this.tilesChecked[1].remove();   
@@ -90,6 +90,7 @@ const memoryGame = {
 
         this.tilePairs++;
         if (this.tilePairs >= this.tileCount / 2) {
+	    this.divScoret.innerText = "Pytanie:";
             document.getElementById('pass_p').innerHTML = plain.toString(CryptoJS.enc.Utf8);
         }
     },
