@@ -60,7 +60,7 @@ button.button,
 input[type=button].button,
 input[type=submit].button {
     display: block;
-    max-width: 30em;
+    max-width: 20em;
     text-align: center;
     padding: 1.3em 3em;
     font-weight: bold;
