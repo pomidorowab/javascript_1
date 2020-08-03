@@ -1,6 +1,6 @@
 const memoryGame = {
     tileCount : 18, //liczba klocków
-    tileOnRow : 6, //liczba klocków na rząd
+    tileOnRow : 10, //liczba klocków na rząd
     divBoard : null, //div z planszą gry
     divScore : null, //div z wynikiem gry
     tiles : [], //tutaj trafi wymieszana tablica klocków
