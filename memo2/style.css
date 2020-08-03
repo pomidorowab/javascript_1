@@ -5,19 +5,20 @@ body {
     justify-content: center;
     background-color: rgb(188, 228, 188);
 }
-h2{
-color: #1bad0a;
-font-size: 30px;
-}
-h3{
-color: #ee1040;
-font-size: 30px;
-}
+
+h2 {
+   color: #1bad0a;
+   font-size: 24px;
+   }
+
+h3 {
+   color: #ee1040;
+   font-size: 30px;
+   }
 
 .myDiv { 
   text-align: center;
-  font-family:sans-serif;
- 
+  font-family:sans-serif; 
 }
 
 .game-board {
@@ -59,7 +60,7 @@ button.button,
 input[type=button].button,
 input[type=submit].button {
     display: block;
-    max-width: 20em;
+    max-width: 30em;
     text-align: center;
     padding: 1.3em 3em;
     font-weight: bold;
