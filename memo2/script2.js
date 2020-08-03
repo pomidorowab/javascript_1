@@ -3,6 +3,7 @@ const memoryGame = {
     tileOnRow : 6, //liczba klocków na rząd
     divBoard : null, //div z planszą gry
     divScore : null, //div z wynikiem gry
+    divScoret : null, // div z dodatkowym tekstem
     tiles : [], //tutaj trafi wymieszana tablica klocków
     tilesChecked : [], //zaznaczone klocki
     moveCount : 0, //liczba ruchów
@@ -41,7 +42,7 @@ const memoryGame = {
                 this.moveCount++;
 		        this.dataczas= new Date();
                 this.divScore.innerText = this.moveCount;
-                this.divScore.innerText = 'aLiczba odsłon: ' + this.divScore.innerText +', data: '+ this.dataczas.toLocaleDateString() +', godzina: '+ this.dataczas.getHours() +':'+ this.dataczas.getMinutes() +':'+ this.dataczas.getSeconds();
+                this.divScore.innerText = 'bLiczba odsłon: ' + this.divScore.innerText +', data: '+ this.dataczas.toLocaleDateString() +', godzina: '+ this.dataczas.getHours() +':'+ this.dataczas.getMinutes() +':'+ this.dataczas.getSeconds();
             }
         }
     },
@@ -51,6 +52,7 @@ const memoryGame = {
         var plain = CryptoJS.AES.decrypt(psr, 'CryptoJS.pad.Pkcs7', "{ mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 }");
         //this.tilesChecked[0].remove(); zniknięcie odkrytej pary klocków
         //this.tilesChecked[1].remove();
+	this.divScoret.innerText = 'aaaaaaaa';
 	
 
         this.canGet = true;
