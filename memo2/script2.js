@@ -9,6 +9,7 @@ const memoryGame = {
     moveCount : 0, //liczba ruchów
     dataczasstart : 0, // data i czas startu
     dataczas : 0, //data i czas
+    czas : 0, // czas wykonania	
     tilesImg : [ //grafiki dla klocków
         "images/title_1.png",
         "images/title_2.png",
@@ -42,8 +43,9 @@ const memoryGame = {
                 }
                 this.moveCount++;
 		this.dataczas= new Date();
+		this.czas = this.dataczasstart-this.dataczas;    
                 this.divScore.innerText = this.moveCount;
-                this.divScore.innerText = 'Liczba odsłon: ' + this.divScore.innerText +', data: '+ this.dataczas.toLocaleDateString() + ', godzina start: '+ this.dataczasstart.getHours() +':'+ this.dataczasstart.getMinutes() +':'+ this.dataczasstart.getSeconds() + ', godzina stop: '+ this.dataczas.getHours() +':'+ this.dataczas.getMinutes() +':'+ this.dataczas.getSeconds()+ 'czas: ' + this.dataczasstart - this.dataczas;
+                this.divScore.innerText = 'Liczba odsłon: ' + this.divScore.innerText +', data: '+ this.dataczas.toLocaleDateString() + ', godzina start: '+ this.dataczasstart.getHours() +':'+ this.dataczasstart.getMinutes() +':'+ this.dataczasstart.getSeconds() + ', godzina stop: '+ this.dataczas.getHours() +':'+ this.dataczas.getMinutes() +':'+ this.dataczas.getSeconds()+ 'czas: ' + this.czas;
 		    
 	    }
         }
