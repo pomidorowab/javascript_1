@@ -5,15 +5,12 @@
     <title>Memo</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-      <div class="myDiv">
-      <h2 id="pass_p"></h2>
-      </div>
-	
+<body>	
 	<div class="game"> 
 	<div class="brow"> 
 	<h3 id="IE"></h3>
-  <script> 
+		
+        <script> 
 			//detects if user uses Internet Explorer 
 			//returns version of IE or false, if browser is not IE 
 			//Function to detect IE or not 
@@ -41,21 +38,24 @@
 			var result = IEdetection(); 
 			document.getElementById('IE').innerHTML = result
 			
-		</script> 
+	</script> 
 </div> 
 
+    <div class="myDiv">
+    <h2 id="pass_p"></h2>
+    </div>
+    <br>
+		
     <div class="game-board">
     </div>
 
-    <div class="game-score">
-    </div>
-
-    <button class="button game-start">START</button>
-    
     <div class="game-scoret">
     </div> <br><br>
 
-
+    <div class="game-score">
+    </div>
+		
+    <button class="button game-start">START</button>    
 		
 </div>
  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
