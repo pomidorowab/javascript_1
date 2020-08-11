@@ -1,5 +1,5 @@
 body {
-    font-family:sans-serif;
+    font-family:'Fira Sans', sans-serif;   
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,7 +18,7 @@ h3 {
 
 .myDiv { 
   text-align: center;
-  font-family:sans-serif; 
+  font-family:'Fira Sans', sans-serif;   
 }
 
 .game-board {
